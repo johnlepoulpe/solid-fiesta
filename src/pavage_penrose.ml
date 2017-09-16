@@ -6,25 +6,16 @@ let golden_ratio = (1. +. sqrt 5.) /. 2. ;;
 let taille = 500.;;
   
 type triangle = Obtuse | Acute ;;
-let move a b = moveto (int_of_float a) (int_of_float b);;
-let line a b = lineto (int_of_float a) (int_of_float b);;
-let iof_array tab =
-  let int_tab = Array.create (Array.length tab) (0,0) in
-  for i= 0 to Array.length tab-1 do
-    let (x,y) = tab.(i) in int_tab.(i) <- (int_of_float x, int_of_float y) 
-  done; int_tab;;
-  
-let wait t =
-  for i = 0 to t do
-    print_string " "
-  done;;
-  
+let move (a,b) = moveto (int_of_float a) (int_of_float b);;
+let line (a,b) = lineto (int_of_float a) (int_of_float b);;
+let iof_array tab = Array.map (fun (x,y) -> (int_of_float x, int_of_float y)) tab;;
+let homothety tab factor = Array.map (fun (x,y) factor -> (x*.factor,y*.factor)) tab;;
+ 
 let draw points triangle =
   (if triangle = Obtuse then set_color red
   else set_color blue);
-  let (p1x,p1y) = points.(0) and (p2x,p2y) = points.(1) and (p3x,p3y) = points.(2) in
-  move p1x p1y; line p2x p2y;  
-  line p3x p3y; line p1x p1y; fill_poly (iof_array points);; 
+  move points.(0); line points.(1);  
+  line points.(2); line points.(0); fill_poly (iof_array points);; 
   
 
 let a = taille *. (sqrt (golden_ratio*.golden_ratio -. 0.25));;
