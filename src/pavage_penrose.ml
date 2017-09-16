@@ -42,11 +42,11 @@ let rec divide generation points triangle =
       else 
 	(let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1y +.(p2y-.p1y)/.(1.+.golden_ratio)) in
 	let newpoint2 = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
-	divide (generation -1) [|points.(0); points.(1); newpoint2|] Obtuse;
+	divide (generation -1) [|newpoint1; newpoint2; points.(0)|] Obtuse;
 	divide (generation -1) [|points.(1); points.(2); newpoint2|] Acute;
 	divide (generation -1) [|points.(1); newpoint2 ; newpoint1|] Acute)
     end;;
 
-(* divide 2 [|(taille*.golden_ratio/.2., taille*.sqrt(1.-.golden_ratio*.golden_ratio /. 4.)); (taille*. golden_ratio,0.); (0.,0.)|] Obtuse ;; *)
+ (* divide 3 [|(taille*.golden_ratio/.2., taille*.sqrt(1.-.golden_ratio*.golden_ratio /. 4.)); (taille*. golden_ratio,0.); (0.,0.)|] Obtuse ;; *)
 
-divide 1 [| (taille*. sqrt (golden_ratio *.golden_ratio -. 0.25), taille*.0.5);(0.,0.); (0., taille)|] Acute;;
+divide 3 [|(taille*. sqrt (golden_ratio *.golden_ratio -. 0.25), taille*.0.5);(0.,0.); (0., taille)|] Acute;;
