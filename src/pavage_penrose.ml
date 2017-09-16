@@ -10,7 +10,7 @@ let move a b = moveto (int_of_float a) (int_of_float b);;
 let line a b = lineto (int_of_float a) (int_of_float b);;
 let iof_array tab =
   let int_tab = Array.create (Array.length tab) (0,0) in
-  for i= 0 to Array.length tab do
+  for i= 0 to Array.length tab-1 do
     let (x,y) = tab.(i) in int_tab.(i) <- (int_of_float x, int_of_float y) 
   done; int_tab;;
   
@@ -24,7 +24,7 @@ let draw points triangle =
   else set_color blue);
   let (p1x,p1y) = points.(0) and (p2x,p2y) = points.(1) and (p3x,p3y) = points.(2) in
   move p1x p1y; line p2x p2y;  
-  line p3x p3y; line p1x p1y (* ; fill_poly (iof_array points) *);;
+  line p3x p3y; line p1x p1y; fill_poly (iof_array points);; 
   
 
 let a = taille *. (sqrt (golden_ratio*.golden_ratio -. 0.25));;
