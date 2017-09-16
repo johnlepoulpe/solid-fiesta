@@ -36,15 +36,17 @@ let rec divide generation points triangle =
   else begin
       let (p1x,p1y) = points.(0) and (p2x,p2y) = points.(1) and (p3x,p3y) = points.(2) in
       if triangle = Obtuse then
-	(let newpoint = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
-	divide (generation -1) [|points.(0); points.(1); newpoint|] Acute;
-	divide (generation -1) [|points.(2); newpoint; points.(1)|] Obtuse)
+	(let newpoint = (p2x +.(p3x-.p2x)/.(1.+.golden_ratio), p2y +.(p3y-.p2y)/.(1.+.golden_ratio)) in
+	divide (generation -1) [|newpoint; points.(0); points.(1)|] Obtuse;
+	divide (generation -1) [|points.(2); points.(0); newpoint|] Acute)
       else 
-	(let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1x +.(p2x-.p2x)/.(1.+.golden_ratio)) in
-	let newpoint2 = (p2x +.(p1x-.p2x)/.(1.+.golden_ratio), p2y +.(p1y-.p2y)/.(1.+.golden_ratio)) in
+	(let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1y +.(p2y-.p1y)/.(1.+.golden_ratio)) in
+	let newpoint2 = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
 	divide (generation -1) [|points.(0); points.(1); newpoint2|] Obtuse;
 	divide (generation -1) [|points.(1); points.(2); newpoint2|] Acute;
 	divide (generation -1) [|points.(1); newpoint2 ; newpoint1|] Acute)
     end;;
 
-divide 0 [|(0.,0.); (500.*.golden_ratio/.2., 500.*.sqrt(1.-.golden_ratio*.golden_ratio /. 4.)); (500.*. golden_ratio,0.)|] Acute ;;
+(* divide 2 [|(taille*.golden_ratio/.2., taille*.sqrt(1.-.golden_ratio*.golden_ratio /. 4.)); (taille*. golden_ratio,0.); (0.,0.)|] Obtuse ;; *)
+
+divide 1 [| (taille*. sqrt (golden_ratio *.golden_ratio -. 0.25), taille*.0.5);(0.,0.); (0., taille)|] Acute;;
