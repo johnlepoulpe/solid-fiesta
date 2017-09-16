@@ -2,4 +2,6 @@ This is the programming project from ENS-Rennes L3, year 2017 to learn ML.
 
 Source files are in src/. Soon, there will be some docs in doc/.
 
+In pavage_penrose.ml, converting integer in floats and vice versa makes the code a bit heavy. We will also use floating numbers until the very end, converting them only before drawing.
+
 In pavage_penrose.ml, we will use the following convention: we will start counting the corners by beginning from the one which determinates if it is a Obtuse or an Acute one and then turning clockwise.
