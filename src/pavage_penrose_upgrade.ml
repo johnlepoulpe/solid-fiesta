@@ -35,8 +35,8 @@ let rec divide generation points triangle (* init_generation *)=
       else 
 	(let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1y +.(p2y-.p1y)/.(1.+.golden_ratio)) in
 	let newpoint2 = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
-	divide (generation -1) [|newpoint1; newpoint2; points.(0)|] Obtuse (* init_generation *); (* *)
-	divide (generation -1) [|points.(1); newpoint2; points.(2)|] Acute (* init_generation *); (* *)
+	divide (generation -1) [|newpoint1; points.(0); newpoint2 |] Obtuse (* init_generation *); 
+	divide (generation -1) [|points.(1); points.(2);  newpoint2|] Acute (* init_generation *);
 	divide (generation -1) [|points.(1); newpoint2; newpoint1|] Acute (* init_generation *))
     end;;
 
