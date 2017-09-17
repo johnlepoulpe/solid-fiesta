@@ -1,7 +1,10 @@
 #load "graphics.cma";;
+#load "unix.cma";;
+    
 open Graphics;;
-open_graph " 1500x1000-0+0";;
-       
+open_graph " 800x600-0+0";;
+
+
 let golden_ratio = (1. +. sqrt 5.) /. 2. ;;
 let taille = 800.;;
   
@@ -12,7 +15,6 @@ let iof_array tab = Array.map (fun (x,y) -> (int_of_float x, int_of_float y)) ta
 let homothety tab factor = Array.map (fun (x,y) -> (x*.factor,y*.factor)) tab;;
  
 let draw points triangle =
-  set_color black;
   (if triangle = Obtuse then set_color red
   else set_color blue);
   fill_poly (iof_array points);;
@@ -42,6 +44,7 @@ let rec divide generation points triangle =
 type triangle_liste = ((float * float) array * triangle) list;;
 
 let divide2 generation points triangle =
+  move points.(0); line points.(1); line points.(2); line points.(0);
   let rec aux u v =
     match u with
     | [] -> v
@@ -59,9 +62,9 @@ let divide2 generation points triangle =
   in
   let rec aux2 generation u =
     if generation = 0 then List.map (fun (tab, triangle_type) -> draw tab triangle_type) u
-    else let v = aux u [] in aux2 (generation - 1) v
+    else let v = aux u [] in Unix.sleep 1; aux2 (generation - 1) v
   in
   aux2 generation [(points, triangle)];();;
 
-divide 8 [|(taille*. sqrt (golden_ratio *.golden_ratio -. 0.25), taille*.0.5); (0.,0.); (0., taille)|] Acute;;
+divide2 10 [|(taille*. sqrt (golden_ratio *.golden_ratio -. 0.25), taille*.0.5); (0.,0.); (0., taille)|] Acute;;
  
