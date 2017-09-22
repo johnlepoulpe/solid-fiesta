@@ -3,6 +3,8 @@
     
 open Graphics;;
 open_graph " 1500x1000-0+0";;
+
+(*CONSTANTS*)    
 let width = 1500.;;
 let height = 1000.;; 
   
@@ -10,8 +12,10 @@ let golden_ratio = (1. +. sqrt 5.) /. 2. ;;
 let size = 800.;;
   
 type triangle = Obtuse | Acute ;;
+type triangle_liste = ((float * float) array * triangle) list;;
 
-(*Posting functions*)
+(*POSTING FUNCTIONS*)
+  
 let move (a,b) = moveto (int_of_float a) (int_of_float b);;
 let line (a,b) = lineto (int_of_float a) (int_of_float b);;
 let iof_array tab = Array.map (fun (x,y) -> (int_of_float x, int_of_float y)) tab;;
@@ -28,10 +32,13 @@ let in_bounds pts_triangle =
      p2x >= 0. && p2x <= width && p2y >= 0. && p2y <= height &&
      p3x >= 0. && p3x <= width && p3y >= 0. && p3y <= height);;
 
-(*Fisrt version : Depth-first search*)
-let rec divide generation points triangle fill= 
+(*FIRST VERSION: Depth-fisrt search*)
+(* Draw each only once *)
+
+let rec divide generation points triangle fill=
   if generation = 0 then (if fill then draw points triangle else ())
   else begin
+      (* We will use the following convention: we will list the corners of a triangle starting with the different one and turning clockwise*)
       let (p1x,p1y) = points.(0) and (p2x,p2y) = points.(1) and (p3x,p3y) = points.(2) in
       if triangle = Obtuse then
 	(let newpoint = (p2x +.(p3x-.p2x)/.(1.+.golden_ratio), p2y +.(p3y-.p2y)/.(1.+.golden_ratio)) in
@@ -55,13 +62,12 @@ let rec divide generation points triangle fill=
 
 (* divide 5 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute true;; *)
 
-type triangle_liste = ((float * float) array * triangle) list;;
+(*SECOND VERSION: Breadth-first search*)
+(*Depth-first search prevent us from posting each generation one after the other*)
 
-(* Second version : Breadth-first search*)
-  
 let divide2 generation points triangle =
   move points.(0); line points.(1); line points.(2); line points.(0);
-  let rec aux u v =
+  let rec triangle_division u v =
     match u with
     | [] -> v
     | u1::us -> (let ([|(p1x,p1y);(p2x,p2y);(p3x,p3y)|],triangle_type) = u1 in
@@ -71,7 +77,7 @@ let divide2 generation points triangle =
 		    move (p1x,p1y);
 		    line newpoint;
 		    let new_triangle1 = [|newpoint; (p1x,p1y); (p2x,p2y)|] and new_triangle2 = [|(p3x,p3y); (p1x,p1y); newpoint|] in
- 		    aux us ((new_triangle1, Obtuse)::(new_triangle2, Acute)::v))
+ 		    triangle_division us ((new_triangle1, Obtuse)::(new_triangle2, Acute)::v))
 		 else 
 		   (let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1y +.(p2y-.p1y)/.(1.+.golden_ratio)) in
 		    let newpoint2 = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
@@ -82,23 +88,22 @@ let divide2 generation points triangle =
 		    let new_triangle1 = [|newpoint1; newpoint2; (p1x,p1y)|] in 
 		    let new_triangle2 = [|(p2x,p2y); (p3x,p3y); newpoint2|] in
 		    let new_triangle3 = [|(p2x,p2y); newpoint2; newpoint1|] in
-		    aux us ((new_triangle1, Obtuse)::
+		    triangle_division us ((new_triangle1, Obtuse)::
 			      (new_triangle2, Acute)::
 				(new_triangle3, Acute)::v)))
   in
-  let rec aux2 generation u =
-    if generation = 0 then List.map (fun (tab, triangle_type) -> draw tab triangle_type) u
-    else let v = aux u [] in Unix.sleep 1; aux2 (generation - 1) v
+  let rec one_step generation u =
+    if generation = 0 then List.map (fun (array, triangle_type) -> draw array triangle_type) u
+    else let v = triangle_division u [] in Unix.sleep 1; one_step (generation - 1) v
   in
-  aux2 generation [(points, triangle)];
+  one_step generation [(points, triangle)];
   divide generation points triangle false
 ;;
 
 (* divide2 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute;; *)
-
   
 divide2 7 [|( width+.height*.sqrt(golden_ratio*.golden_ratio-. 0.25),height/.2.); (0., -.width*.sqrt(4.*.golden_ratio*.golden_ratio-.1.)); (0., height+.width*.sqrt(4.*.golden_ratio*.golden_ratio-.1.))|] Acute;;
 																      
   (* TODO: - homothetie *)
-						(* 	- fill the whole screen *)
-						(*- puissance float *)
+  (* 	- fill the whole screen *)
+  (*    - puissance float *)
