@@ -63,20 +63,34 @@ let divide2 generation points triangle =
     | u1::us -> (let ([|(p1x,p1y);(p2x,p2y);(p3x,p3y)|],triangle_type) = u1 in
 		 if triangle_type = Obtuse then
 		   (let newpoint = (p2x +.(p3x-.p2x)/.(1.+.golden_ratio), p2y +.(p3y-.p2y)/.(1.+.golden_ratio)) in
-		    set_color black; move (p1x,p1y); line newpoint;
-		     aux us (([|newpoint; (p1x,p1y); (p2x,p2y)|], Obtuse)::([|(p3x,p3y); (p1x,p1y); newpoint|], Acute)::v))
+		    set_color black;
+		    move (p1x,p1y);
+		    line newpoint;
+		    let new_triangle1 = [|newpoint; (p1x,p1y); (p2x,p2y)|] and new_triangle2 = [|(p3x,p3y); (p1x,p1y); newpoint|] in
+ 		    aux us ((new_triangle1, Obtuse)::(new_triangle2, Acute)::v))
 		 else 
 		   (let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1y +.(p2y-.p1y)/.(1.+.golden_ratio)) in
 		    let newpoint2 = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
-		    set_color black; move newpoint1;
-		    line newpoint2; line (p2x,p2y);
-		    aux us (([|newpoint1; newpoint2; (p1x,p1y)|], Obtuse)::([|(p2x,p2y); (p3x,p3y); newpoint2|], Acute)::([|(p2x,p2y); newpoint2; newpoint1|], Acute)::v)))
+		    set_color black;
+		    move newpoint1;
+		    line newpoint2;
+		    line (p2x,p2y);
+		    let new_triangle1 = [|newpoint1; newpoint2; (p1x,p1y)|] in 
+		    let new_triangle2 = [|(p2x,p2y); (p3x,p3y); newpoint2|] in
+		    let new_triangle3 = [|(p2x,p2y); newpoint2; newpoint1|] in
+		    aux us ((new_triangle1, Obtuse)::
+			      (new_triangle2, Acute)::
+				(new_triangle3, Acute)::v)))
   in
   let rec aux2 generation u =
     if generation = 0 then List.map (fun (tab, triangle_type) -> draw tab triangle_type) u
     else let v = aux u [] in Unix.sleep 1; aux2 (generation - 1) v
   in
-  aux2 generation [(points, triangle)];();;
+  aux2 generation [(points, triangle)];
+  divide generation points triangle
+;;
 
-divide2 10 [|(taille*. sqrt (golden_ratio *.golden_ratio -. 0.25), taille*.0.5); (0.,0.); (0., taille)|] Acute;;
+divide2 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute;;
  
+  (* TODO: - homothetie *)
+  (* 	- fill the whole screen *)
