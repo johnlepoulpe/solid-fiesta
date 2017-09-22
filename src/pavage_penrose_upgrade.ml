@@ -29,23 +29,23 @@ let in_bounds pts_triangle =
      p3x >= 0. && p3x <= width && p3y >= 0. && p3y <= height);;
 
 (*Fisrt version : Depth-first search*)
-let rec divide generation points triangle =
-  if generation = 0 then () (* draw points triangle *)
+let rec divide generation points triangle fill= 
+  if generation = 0 then (if fill then draw points triangle else ())
   else begin
       let (p1x,p1y) = points.(0) and (p2x,p2y) = points.(1) and (p3x,p3y) = points.(2) in
       if triangle = Obtuse then
 	(let newpoint = (p2x +.(p3x-.p2x)/.(1.+.golden_ratio), p2y +.(p3y-.p2y)/.(1.+.golden_ratio)) in
-	 divide (generation -1) [|newpoint; points.(0); points.(1)|] Obtuse;
-	 divide (generation -1) [|points.(2);points.(0); newpoint|] Acute;
+	 divide (generation -1) [|newpoint; points.(0); points.(1)|] Obtuse fill;
+	 divide (generation -1) [|points.(2);points.(0); newpoint|] Acute fill;
 	 set_color black;
 	 move points.(0);
 	 line newpoint)
       else
 	(let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1y +.(p2y-.p1y)/.(1.+.golden_ratio)) in
 	 let newpoint2 = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
-	 divide (generation -1) [|newpoint1; newpoint2; points.(0)|] Obtuse;
-	 divide (generation -1) [|points.(1); points.(2); newpoint2|] Acute;
-	 divide (generation -1) [|points.(1); newpoint2; newpoint1|] Acute;
+	 divide (generation -1) [|newpoint1; newpoint2; points.(0)|] Obtuse fill;
+	 divide (generation -1) [|points.(1); points.(2); newpoint2|] Acute fill;
+	 divide (generation -1) [|points.(1); newpoint2; newpoint1|] Acute fill;
 	 set_color black;
 	 move newpoint1;
 	 line newpoint2;
@@ -53,7 +53,7 @@ let rec divide generation points triangle =
     end
 ;;
 
-(* divide 5 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute;; *)
+(* divide 5 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute true;; *)
 
 type triangle_liste = ((float * float) array * triangle) list;;
 
@@ -91,10 +91,14 @@ let divide2 generation points triangle =
     else let v = aux u [] in Unix.sleep 1; aux2 (generation - 1) v
   in
   aux2 generation [(points, triangle)];
-  divide generation points triangle
+  divide generation points triangle false
 ;;
 
-divide2 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute;;
- 
+(* divide2 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute;; *)
+
+  
+divide2 7 [|( width+.height*.sqrt(golden_ratio*.golden_ratio-. 0.25),height/.2.); (0., -.width*.sqrt(4.*.golden_ratio*.golden_ratio-.1.)); (0., height+.width*.sqrt(4.*.golden_ratio*.golden_ratio-.1.))|] Acute;;
+																      
   (* TODO: - homothetie *)
-  (* 	- fill the whole screen *)
+						(* 	- fill the whole screen *)
+						(*- puissance float *)
