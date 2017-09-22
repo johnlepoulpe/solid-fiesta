@@ -2,11 +2,12 @@
 #load "unix.cma";;
     
 open Graphics;;
-open_graph " 800x600-0+0";;
-
-
+open_graph " 1500x1000-0+0";;
+let width = 1500.;;
+let height = 1000.;; 
+  
 let golden_ratio = (1. +. sqrt 5.) /. 2. ;;
-let taille = 800.;;
+let size = 800.;;
   
 type triangle = Obtuse | Acute ;;
 let move (a,b) = moveto (int_of_float a) (int_of_float b);;
