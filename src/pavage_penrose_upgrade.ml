@@ -10,6 +10,8 @@ let golden_ratio = (1. +. sqrt 5.) /. 2. ;;
 let size = 800.;;
   
 type triangle = Obtuse | Acute ;;
+
+(*Posting functions*)
 let move (a,b) = moveto (int_of_float a) (int_of_float b);;
 let line (a,b) = lineto (int_of_float a) (int_of_float b);;
 let iof_array tab = Array.map (fun (x,y) -> (int_of_float x, int_of_float y)) tab;;
@@ -25,9 +27,8 @@ let in_bounds pts_triangle =
   (p1x >= 0. && p1x <= width && p1y >= 0. && p1y <= height &&
      p2x >= 0. && p2x <= width && p2y >= 0. && p2y <= height &&
      p3x >= 0. && p3x <= width && p3y >= 0. && p3y <= height);;
-    
-let a = size *. (sqrt (golden_ratio*.golden_ratio -. 0.25));;
-  
+
+(*Fisrt version : Depth-first search*)
 let rec divide generation points triangle =
   if generation = 0 then () (* draw points triangle *)
   else begin
@@ -49,12 +50,15 @@ let rec divide generation points triangle =
 	 move newpoint1;
 	 line newpoint2;
 	 line points.(1))
-    end;;
+    end
+;;
 
 (* divide 5 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute;; *)
 
 type triangle_liste = ((float * float) array * triangle) list;;
 
+(* Second version : Breadth-first search*)
+  
 let divide2 generation points triangle =
   move points.(0); line points.(1); line points.(2); line points.(0);
   let rec aux u v =
