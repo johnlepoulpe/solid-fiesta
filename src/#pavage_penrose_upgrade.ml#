@@ -4,7 +4,7 @@
 open Graphics;;
 open_graph " 1500x1000-0+0";;
 
-(*CONSTANTS*)    
+(*CONSTANTS*)
 let width = 1500.;;
 let height = 1000.;; 
   
@@ -58,11 +58,7 @@ let rec divide generation points triangle fill=
 	 move newpoint1;
 	 line newpoint2;
 	 line points.(1))
-    end;
-  move points.(0);
-  line points.(1);
-  line points.(2);
-  line points.(0)
+    end
 ;;
 
 (*SECOND VERSION: Breadth-first search*)
@@ -71,10 +67,7 @@ let rec divide generation points triangle fill=
   (* One of the main problemis that the triangles have to be filled before thy are drawn to avoid covering their edges.*)
   
 let divide2 generation points triangle =
-  move points.(0);
-  line points.(1);
-  line points.(2);
-  line points.(0);
+  move points.(0); line points.(1); line points.(2); line points.(0);
   let rec triangle_division u v =
     match u with
     | [] -> v
@@ -102,8 +95,7 @@ let divide2 generation points triangle =
   in
   let rec one_step generation u =
     if generation = 0 then List.map (fun (array, triangle_type) -> draw array triangle_type) u
-    else let v = triangle_division u [] in Unix.sleep 1;
-					   one_step (generation - 1) v
+    else let v = triangle_division u [] in Unix.sleep 1; one_step (generation - 1) v
   in
   one_step generation [(points, triangle)];
   divide generation points triangle false
@@ -116,10 +108,7 @@ let divide2 generation points triangle =
 
 
 let divide3 generation points triangle =
-  move points.(0);
-  line points.(1);
-  line points.(2);
-  line points.(0);
+  move points.(0); line points.(1); line points.(2); line points.(0);
   let rec triangle_division u v =
     match u with
     | [] -> v
@@ -147,8 +136,7 @@ let divide3 generation points triangle =
   in
   let rec one_step generation u =
     if generation = 0 then List.map (fun (array, triangle_type) -> draw array triangle_type) u
-    else let v = triangle_division u [] in Unix.sleep 1;
-					   one_step (generation - 1) v
+    else let v = triangle_division u [] in Unix.sleep 1; one_step (generation - 1) v
   in
   one_step generation [(points, triangle)];
   divide generation points triangle false

@@ -1,4 +1,3 @@
-
 (*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*)
 
 (*DRAWING FUNCTIONS*)
@@ -125,7 +124,8 @@ let move_disc total_discs rods orig_rod dest_rod =
   
   rods.(orig_rod) <- pop rods.(orig_rod);
   rods.(dest_rod) <- push disc rods.(dest_rod);
-  
+
+  print rods;
   draw_situation total_discs rods;;
       
 (*moves num_discs discs from orig_rod to dest_rod*)
@@ -155,7 +155,8 @@ let hanoi total_discs =
   close_graph ();
   open_graph " 800x600-0+0";
   
-  let rods = [|[]; []; []|] in rods.(0) <- init_rod (total_discs-1) [];
+  let rods =
+    [|[]; []; []|] in rods.(0) <- init_rod (total_discs-1) [];
 
   draw_rods ();
   draw_situation total_discs rods;
