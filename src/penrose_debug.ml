@@ -21,10 +21,10 @@ let line (a,b) = lineto (int_of_float a) (int_of_float b);;
 let iof_array tab = Array.map (fun (x,y) -> (int_of_float x, int_of_float y)) tab;;
 let homothety tab factor = Array.map (fun (x,y) -> (x*.factor,y*.factor)) tab;;
   
-let draw points triangle =
+let draw points triangle homo_factor=
   (if triangle = Obtuse then set_color red
    else set_color blue);
-  fill_poly (iof_array (homothety points 1.));;
+  fill_poly (iof_array (homothety points homo_factor));;
  
 let in_bounds pts_triangle =
   let [|(p1x,p1y); (p2x,p2y); (p3x,p3y)|] = pts_triangle in
@@ -39,7 +39,7 @@ let in_bounds pts_triangle =
   
 let divide generation points triangle_type fill=
   let rec aux_divide gen pts triangle =
-    if gen = 0 then (if fill then draw pts triangle else ())
+    if gen = 0 then (if fill then draw pts triangle 1. else ())
     else begin
 	(* We will use the following convention: we will list the corners of a triangle starting with the different one and turning clockwise*)
 	let (p1x,p1y) = pts.(0) and (p2x,p2y) = pts.(1) and (p3x,p3y) = pts.(2) in
@@ -106,7 +106,7 @@ let divide2 generation points triangle fill=
   in
    let rec one_step gen triangle_list =
      if gen = 0 then (if fill
-		      then (List.map (fun (tab, triangle_type) -> draw tab triangle_type) triangle_list;
+		      then (List.map (fun (tab, triangle_type) -> draw tab triangle_type 1.) triangle_list;
 			    divide generation points triangle false )) 
      else let v = triangle_division triangle_list [] in Unix.sleep 1;
 							one_step (gen - 1) v
@@ -126,9 +126,9 @@ let divide3 generation points triangle fill =
   
 (*TESTING*)
 
-divide 5 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute true;;
+(* divide 5 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute true;; *)
 (* divide2 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute false;; *)
-(* divide3 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute false;; *)
+divide3 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute true;;
   
   
    (* TODO: - homothetie *)
