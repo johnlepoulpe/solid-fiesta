@@ -67,7 +67,7 @@ let rec divide generation points triangle fill=
   (* Depth-first search prevent us from posting each generation one after the other*)
   (* One of the main problem is that the triangles have to be filled before thy are drawn to avoid covering their edges.*)
   
-let divide2 generation points triangle =
+let divide2 generation points triangle fill=
   move points.(0);
   line points.(1);
   line points.(2);
@@ -98,7 +98,9 @@ let divide2 generation points triangle =
  				(new_triangle3, Acute)::v)))
   in
    let rec one_step gen triangle_list =
-     if gen = 0 then List.map (fun (tab, triangle_type) -> draw tab triangle_type) triangle_list
+     if gen = 0 then (if fill
+		      then (List.map (fun (tab, triangle_type) -> draw tab triangle_type) triangle_list)
+		      else [()] (*Caml is expecting a Unit list*))
      else let v = triangle_division triangle_list [] in Unix.sleep 1;
 							one_step (gen - 1) v
    in
@@ -110,7 +112,7 @@ let divide2 generation points triangle =
   
 (*TESTING*)
 
-divide2 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute;;
+divide2 7 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute true;;
 (* divide 5 [|(size*. sqrt (golden_ratio *.golden_ratio -. 0.25), size*.0.5); (0.,0.); (0., size)|] Acute true;; *)
   
   
