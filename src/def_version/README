@@ -1,0 +1,10 @@
+FILES:
+- hanoi_base.ml is the code without extensions
+- hanoi_generalized.ml is the code for the hanoi problem with n rods/pegs
+- hanoi_gen_graphics.ml is the code for the generalized hanoi problem but with a grapical display
+
+COMMANDS:
+- hanoi_base.ml -> hanoi <number of discs>;;
+- hanoi_generalized.ml -> hanoi <number of discs> <number of rods>;;
+- hanoi_gen_graphics.ml -> hanoi <number of discs> <number of rods>;;
+
