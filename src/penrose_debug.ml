@@ -37,29 +37,36 @@ let in_bounds pts_triangle =
 
 (*Draw each line only once*)
   
-let rec divide generation points triangle fill=
-  if generation = 0 then (if fill then draw points triangle else ())
-  else begin
-      (* We will use the following convention: we will list the corners of a triangle starting with the different one and turning clockwise*)
-      let (p1x,p1y) = points.(0) and (p2x,p2y) = points.(1) and (p3x,p3y) = points.(2) in
-      if triangle = Obtuse then
- 	(let newpoint = (p2x +.(p3x-.p2x)/.(1.+.golden_ratio), p2y +.(p3y-.p2y)/.(1.+.golden_ratio)) in
- 	 divide (generation -1) [|newpoint; points.(0); points.(1)|] Obtuse fill;
- 	 divide (generation -1) [|points.(2);points.(0); newpoint|] Acute fill;
- 	 set_color black;
- 	 move points.(0);
- 	 line newpoint)
-      else
- 	(let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1y +.(p2y-.p1y)/.(1.+.golden_ratio)) in
- 	 let newpoint2 = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
- 	 divide (generation -1) [|newpoint1; newpoint2; points.(0)|] Obtuse fill;
- 	 divide (generation -1) [|points.(1); points.(2); newpoint2|] Acute fill;
- 	 divide (generation -1) [|points.(1); newpoint2; newpoint1|] Acute fill;
- 	 set_color black;
-  	 move newpoint1;
-  	 line newpoint2;
-  	 line points.(1))
-    end
+let divide generation points triangle_type fill=
+  let rec aux_divide gen pts triangle =
+    if gen = 0 then (if fill then draw pts triangle else ())
+    else begin
+	(* We will use the following convention: we will list the corners of a triangle starting with the different one and turning clockwise*)
+	let (p1x,p1y) = pts.(0) and (p2x,p2y) = pts.(1) and (p3x,p3y) = pts.(2) in
+	if triangle = Obtuse then
+ 	  (let newpoint = (p2x +.(p3x-.p2x)/.(1.+.golden_ratio), p2y +.(p3y-.p2y)/.(1.+.golden_ratio)) in
+ 	   aux_divide (gen -1) [|newpoint; pts.(0); pts.(1)|] Obtuse;
+ 	   aux_divide (gen -1) [|pts.(2);pts.(0); newpoint|] Acute;
+ 	   set_color black;
+ 	   move pts.(0);
+ 	   line newpoint)
+	else
+ 	  (let  newpoint1 = (p1x +.(p2x-.p1x)/.(1.+.golden_ratio), p1y +.(p2y-.p1y)/.(1.+.golden_ratio)) in
+ 	   let newpoint2 = (p3x +.(p1x-.p3x)/.(1.+.golden_ratio), p3y +.(p1y-.p3y)/.(1.+.golden_ratio)) in
+ 	   aux_divide (gen -1) [|newpoint1; newpoint2; pts.(0)|] Obtuse;
+ 	   aux_divide (gen -1) [|pts.(1); pts.(2); newpoint2|] Acute;
+ 	   aux_divide (gen -1) [|pts.(1); newpoint2; newpoint1|] Acute;
+ 	   set_color black;
+  	   move newpoint1;
+  	   line newpoint2;
+  	   line pts.(1))
+      end
+  in
+  aux_divide generation points triangle_type;
+  move points.(0);
+  line points.(1);
+  line points.(2);
+  line points.(0)
 ;;
   
 (*SECOND VERSION: Breadth-first search*)
