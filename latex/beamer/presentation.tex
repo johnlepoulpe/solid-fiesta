@@ -1,0 +1,81 @@
+% Created 2017-06-13 mar. 16:02
+\documentclass[11pt,xcolor=dvipsnames,presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usedescriptionitemofwidthas{bl}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[american, english]{babel}
+\usepackage{ifthen,figlatex,amsmath,amstext,gensymb,amssymb}
+\usepackage{boxedminipage,xspace,multicol}
+%%%%%%%%% Begin of Beamer Layout %%%%%%%%%%%%%
+\ProcessOptionsBeamer
+\usecolortheme{whale}
+\usecolortheme[named=BrickRed]{structure}
+\useinnertheme{rounded}
+\useoutertheme{infolines}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{headline}[default]
+\setbeamertemplate{navigation symbols}{}
+\defbeamertemplate*{headline}{info theme}{}
+\defbeamertemplate*{footline}{info theme}{\leavevmode%
+\hbox{%
+\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+\usebeamerfont{author in head/foot}\insertshortauthor
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.71\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+\usebeamerfont{title in head/foot}\insertsectionhead
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.09\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+\usebeamerfont{section in head/foot}\insertframenumber{}~/~\inserttotalframenumber\hspace*{2ex}
+\end{beamercolorbox}
+}\vskip0pt}
+\setbeamertemplate{footline}[info theme]
+%%%%%%%%% End of Beamer Layout %%%%%%%%%%%%%
+\usepackage{verbments}
+\usepackage{subfigure}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{url} \urlstyle{sf}
+\let\alert=\structure % to make sure the org * * works of tools
+%\let\tmptableofcontents=\tableofcontents
+%\def\tableofcontents{}
+\usepackage{color,soul}
+\definecolor{lightorange}{rgb}{1,.9,.7}
+\sethlcolor{lightorange}
+\definecolor{lightgreen}{rgb}{.7,.9,.7}
+\let\hrefold=\href
+\renewcommand{\href}[2]{\hrefold{#1}{\SoulColor{lightorange}\hl{#2}}}
+% \renewcommand{\uline}[1]{\SoulColor{lightorange}\hl{#1}}
+\renewcommand{\emph}[1]{\SoulColor{lightorange}\hl{#1}}
+\makeatletter
+\newcommand\SoulColor[1]{%
+\sethlcolor{#1}%
+\let\set@color\beamerorig@set@color%
+\let\reset@color\beamerorig@reset@color}
+\makeatother
+\let\oldtexttt=\texttt
+% \renewcommand\texttt[1]{\SoulColor{lightgreen}\hl{\tt#1}}
+% \renewcommand\alert[1]{\SoulColor{lightgreen}\hl{#1}}
+\usetheme{default}
+\author{Clément Legrand}
+\date{}
+\title{Algorithmes randomisés \newline Application au problème de la coupe maximale}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.4.1 (Org mode 8.2.10)}}
