@@ -1,0 +1,84 @@
+\documentclass{beamer}%
+
+\usepackage[frenchb]{babel}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+
+\usetheme{Warsaw}%
+
+\usepackage{url}%
+\usepackage{graphicx}%
+\usepackage{listings}%
+\usepackage[font=scriptsize]{caption}%
+
+\title{Projet 1: Pavage de Penrose et Tours de Hanoi}%
+\author{Marco Freire, Clément Legrand-Duchesne}%
+\institute{ENS de Rennes, Département Informatique 1A}%
+\date{1\up{er} septembre 2017}%
+
+\begin{document}
+
+	%prevents header from appearing on titlepage
+	\begingroup 
+		\setbeamertemplate{headline}{}
+		\begin{frame}
+			\titlepage
+		\end{frame}
+	
+	%prevents header from appearing on table of contents and displays
+	%plan as frame title	
+	\begingroup 
+		\setbeamertemplate{headline}{}
+		\addtobeamertemplate{frametitle}{\vspace*{-\headheight}}{}
+		\begin{frame}{Plan}
+			\tableofcontents
+		\end{frame}
+	\endgroup
+
+	\section{Pavage de Penrose}
+		\subsection{Principe}
+			\begin{frame}
+				\frametitle{Algorithme de base}		
+				\begin{columns}
+					\column{2in}
+						\begin{figure}
+							\centering
+							\subcaptionbox{subcaption}{\includegraphics[width=\linewidth]{hanoi_start.png}}\\
+							\subcaptionbox{subcaption}{\includegraphics[width=\linewidth]{hanoi_mid1.png}}
+						\end{figure}
+					\column{2in}
+						\begin{figure}
+							\centering
+							\subcaptionbox{subcaption}{\includegraphics[width=\linewidth]{hanoi_mid2.png}}\\
+							\subcaptionbox{subcaption}{\includegraphics[width=\linewidth]{hanoi_end.png}}
+						\end{figure}
+				\end{columns}
+			\end{frame}		
+		
+		\subsection{Implémentation}
+			\begin{frame}
+				EMPTY FRAME
+			\end{frame}
+			
+		\subsection{Améliorations}
+			\begin{frame}
+				EMPTY FRAME
+			\end{frame}
+			
+	\section{Tours de Hanoi}
+		\subsection{Principe}
+			\begin{frame}
+				EMPTY FRAME
+			\end{frame}
+			
+		\subsection{Implémentation}
+			\begin{frame}
+				EMPTY FRAME
+			\end{frame}
+			
+		\subsection{Améliorations}
+			\begin{frame}
+				EMPTY FRAME
+			\end{frame}
+			
+\end{document}
