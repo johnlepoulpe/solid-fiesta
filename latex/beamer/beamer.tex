@@ -48,11 +48,34 @@
 		\subsection{Principe}
 			\begin{frame}
 				\frametitle{Principe du pavage}
-			\end{frame}		
+				\begin{figure}
+					\centering
+					\setcounter{subfigure}{0}
+					\subfloat[Triangle d'or aigu]{\includegraphics[width=5cm]{penrose_Acute_0.png}}\qquad
+					\subfloat[Découpe en trois
+                                        triangles d'or]{\includegraphics[width=5cm]{penrose_Acute_1.png}}
+				\end{figure}	
+				\begin{figure}
+					\centering
+					\subfloat[Triangle d'or obtus]{\includegraphics[width=5cm]{penrose_Obtuse_0.png}}\qquad
+					\subfloat[Découpe en deux
+                                        triangles d'or]{\includegraphics[width=5cm]{penrose_Obtuse_1.png}}
+				\end{figure}
+                         \end{frame}		
 		
 		\subsection{Implémentation}
 			\begin{frame}
-				EMPTY FRAME
+				\frametitle{Un premier algorithme}
+                                Découpe récursive en partant d'un
+                                grand triangle initial.
+                                \begin{figure}
+                                        \centering
+                                        \subfloat[Éxécution de l'algorithme]{\includegraphics<1>[width=8cm]{anim0.pdf}}
+                                        %\subfloat[Éxécution de l'algorithme]{\includegraphics<2>[width=8cm]{anim1.pdf}}
+                                        %\subfloat[Éxécution de l'algorithme]{\includegraphics<3>[width=8cm]{anim2.pdf}}
+                                        %\subfloat[Éxécution de l'algorithme]{\includegraphics<4>[width=8cm]{anim3.pdf}}
+                                        %\subfloat[Éxécution de l'algorithme]{\includegraphics<5>[width=8cm]{anim4.pdf}}
+                                \end{figure}
 			\end{frame}
 			
 		\subsection{Améliorations}
@@ -76,7 +99,6 @@
 				aucun disque ne peut être empilé à aucun moment sur un disque de taille inférieure.				
 			\end{frame}
 		
-		%TODO: /!\ cut or resize images /!\
 			\begin{frame}
 				\frametitle{Algorithme simple}
 				\begin{figure}
