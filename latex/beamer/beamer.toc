@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.36pt}
+\beamer@endinputifotherversion {3.33pt}
 \select@language {french}
 \beamer@sectionintoc {1}{Pavage de Penrose}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Principe}{3}{0}{1}
