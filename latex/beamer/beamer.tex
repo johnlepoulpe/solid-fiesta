@@ -68,16 +68,27 @@
 				\frametitle{Un premier algorithme}
                                 Découpe récursive en partant d'un
                                 grand triangle initial.
-                                \begin{figure}
-                                        \centering
-                                        \subfloat[Éxécution de l'algorithme]{\includegraphics<1>[width=8cm]{anim0.pdf}}
-                                        %\subfloat[Éxécution de l'algorithme]{\includegraphics<2>[width=8cm]{anim1.pdf}}
-                                        %\subfloat[Éxécution de l'algorithme]{\includegraphics<3>[width=8cm]{anim2.pdf}}
-                                        %\subfloat[Éxécution de l'algorithme]{\includegraphics<4>[width=8cm]{anim3.pdf}}
-                                        %\subfloat[Éxécution de l'algorithme]{\includegraphics<5>[width=8cm]{anim4.pdf}}
-                                \end{figure}
+                                \begin{center}
+                                        \includegraphics<+>[width=8cm]{anim0.pdf}%
+                                        \includegraphics<+>[width=8cm]{anim1.pdf}%
+                                        \includegraphics<+>[width=8cm]{anim2.pdf}%
+                                        \includegraphics<+>[width=8cm]{anim3.pdf}%
+                                        \includegraphics<+>[width=8cm]{anim4.pdf}%
+
+                                        Execution de l'algorithme
+                                \end{center}
 			\end{frame}
 			
+                        \begin{frame}
+                          \frametitle{Limite du premier algorithme}
+                          \begin{enumerate}
+                            \item parcours en profondeur de l'arbre
+                              des découpes;
+                            \item le remplissage des triangles efface
+                              les bordures si celles ci ont été
+                              tracées avant.
+                            \end{enumerate}
+                          \end{frame}
 		\subsection{Améliorations}
 			\begin{frame}
 				EMPTY FRAME
@@ -94,7 +105,7 @@
 					\subfloat[État final]{\includegraphics[width=5cm]{hanoi_end.png}}
 				\end{figure}
 				
-				Le joueur doit déplacer les n disques initiaux du premier piquet au dernier
+				Le joueur doit déplacer les $n$ disques initiaux du premier piquet au dernier
 				en réalisant un seul mouvement à la fois, et avec la contrainte suivante:
 				aucun disque ne peut être empilé à aucun moment sur un disque de taille inférieure.				
 			\end{frame}
@@ -147,7 +158,7 @@
 				Extensions créées:
 				\begin{itemize}
 					\item affichage graphique;
-					\item généralisation du problème à n piquets.
+					\item généralisation du problème à $p$ piquets.
 				\end{itemize}
 			\end{frame}
 			
