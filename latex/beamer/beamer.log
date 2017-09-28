@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.25)  28 SEP 2017 23:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.25)  28 SEP 2017 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1268,28 +1268,28 @@ LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./beamer.toc) [2
 
 ]
-<penrose_Acute_0.png, id=114, 777.90625pt x 502.87875pt>
+<penrose_Acute_0.png, id=134, 777.90625pt x 502.87875pt>
 File: penrose_Acute_0.png Graphic file (type png)
 
 <use penrose_Acute_0.png>
 Package pdftex.def Info: penrose_Acute_0.png used on input line 64.
 (pdftex.def)             Requested size: 142.26378pt x 91.96452pt.
 
-<penrose_Acute_1.png, id=116, 930.47626pt x 606.265pt>
+<penrose_Acute_1.png, id=136, 930.47626pt x 606.265pt>
 File: penrose_Acute_1.png Graphic file (type png)
 
 <use penrose_Acute_1.png>
 Package pdftex.def Info: penrose_Acute_1.png used on input line 64.
 (pdftex.def)             Requested size: 142.26378pt x 92.69348pt.
 
-<penrose_Obtuse_0.png, id=117, 978.65625pt x 360.34625pt>
+<penrose_Obtuse_0.png, id=137, 978.65625pt x 360.34625pt>
 File: penrose_Obtuse_0.png Graphic file (type png)
 
 <use penrose_Obtuse_0.png>
 Package pdftex.def Info: penrose_Obtuse_0.png used on input line 64.
 (pdftex.def)             Requested size: 142.26378pt x 52.37807pt.
 
-<penrose_Obtuse_1.png, id=118, 981.6675pt x 370.38374pt>
+<penrose_Obtuse_1.png, id=138, 981.6675pt x 370.38374pt>
 File: penrose_Obtuse_1.png Graphic file (type png)
 
 <use penrose_Obtuse_1.png>
@@ -1302,7 +1302,7 @@ Overfull \vbox (10.28998pt too high) detected at line 64
 [3
 
  <./penrose_Acute_0.png> <./penrose_Acute_1.png> <./penrose_Obtuse_0.png> <./pe
-nrose_Obtuse_1.png>] <anim0.pdf, id=156, 930.47626pt x 605.26125pt>
+nrose_Obtuse_1.png>] <anim0.pdf, id=176, 930.47626pt x 605.26125pt>
 File: anim0.pdf Graphic file (type pdf)
 
 <use anim0.pdf>
@@ -1311,28 +1311,28 @@ Package pdftex.def Info: anim0.pdf used on input line 80.
  [4
 
  <./anim0.pdf>]
-<anim1.pdf, id=196, 928.46875pt x 604.2575pt>
+<anim1.pdf, id=217, 928.46875pt x 604.2575pt>
 File: anim1.pdf Graphic file (type pdf)
  <use anim1.pdf>
 Package pdftex.def Info: anim1.pdf used on input line 80.
 (pdftex.def)             Requested size: 227.62204pt x 148.13197pt.
  [5
 
- <./anim1.pdf>] <anim2.pdf, id=235, 930.47626pt x 603.25375pt>
+ <./anim1.pdf>] <anim2.pdf, id=256, 930.47626pt x 603.25375pt>
 File: anim2.pdf Graphic file (type pdf)
  <use anim2.pdf>
 Package pdftex.def Info: anim2.pdf used on input line 80.
 (pdftex.def)             Requested size: 227.62204pt x 147.57294pt.
  [6
 
- <./anim2.pdf>] <anim3.pdf, id=275, 928.46875pt x 604.2575pt>
+ <./anim2.pdf>] <anim3.pdf, id=296, 928.46875pt x 604.2575pt>
 File: anim3.pdf Graphic file (type pdf)
  <use anim3.pdf>
 Package pdftex.def Info: anim3.pdf used on input line 80.
 (pdftex.def)             Requested size: 227.62204pt x 148.13197pt.
  [7
 
- <./anim3.pdf>] <anim4.pdf, id=314, 928.46875pt x 604.2575pt>
+ <./anim3.pdf>] <anim4.pdf, id=335, 928.46875pt x 604.2575pt>
 File: anim4.pdf Graphic file (type pdf)
  <use anim4.pdf>
 Package pdftex.def Info: anim4.pdf used on input line 80.
@@ -1343,13 +1343,13 @@ Package pdftex.def Info: anim4.pdf used on input line 80.
 
 ] [10
 
-] <hanoi_start.png, id=416, 801.99625pt x 439.6425pt>
+] <hanoi_start.png, id=434, 801.99625pt x 439.6425pt>
 File: hanoi_start.png Graphic file (type png)
 
 <use hanoi_start.png>
 Package pdftex.def Info: hanoi_start.png used on input line 111.
 (pdftex.def)             Requested size: 142.26378pt x 77.98509pt.
- <hanoi_end.png, id=417, 803.0pt x 438.63875pt>
+ <hanoi_end.png, id=435, 803.0pt x 438.63875pt>
 File: hanoi_end.png Graphic file (type png)
 
 <use hanoi_end.png>
@@ -1369,53 +1369,49 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: hanoi_start.png Graphic file (type png)
  <use hanoi_start.png>
 Package pdftex.def Info: hanoi_start.png used on input line 126.
-(pdftex.def)             Requested size: 142.26378pt x 77.98509pt.
+(pdftex.def)             Requested size: 122.91406pt x 67.37912pt.
 
-<hanoi_mid1.png, id=454, 803.0pt x 437.635pt>
+<hanoi_mid1.png, id=471, 803.0pt x 437.635pt>
 File: hanoi_mid1.png Graphic file (type png)
  <use hanoi_mid1.png>
 Package pdftex.def Info: hanoi_mid1.png used on input line 126.
-(pdftex.def)             Requested size: 142.26378pt x 77.52882pt.
+(pdftex.def)             Requested size: 122.91406pt x 66.98463pt.
 
-<hanoi_mid2.png, id=455, 803.0pt x 435.6275pt>
+<hanoi_mid2.png, id=472, 803.0pt x 435.6275pt>
 File: hanoi_mid2.png Graphic file (type png)
  <use hanoi_mid2.png>
 Package pdftex.def Info: hanoi_mid2.png used on input line 126.
-(pdftex.def)             Requested size: 142.26378pt x 77.17319pt.
+(pdftex.def)             Requested size: 122.91406pt x 66.67737pt.
 File: hanoi_end.png Graphic file (type png)
 
 <use hanoi_end.png>
 Package pdftex.def Info: hanoi_end.png used on input line 126.
-(pdftex.def)             Requested size: 142.26378pt x 77.70665pt.
-
-Overfull \vbox (21.11769pt too high) detected at line 126
- []
-
-[12
+(pdftex.def)             Requested size: 122.91406pt x 67.13828pt.
+ [12
 
  <./hanoi_mid1.png> <./hanoi_mid2.png>] [13
 
 ]
-<hanoi_gen_start.png, id=523, 1282.7925pt x 717.68124pt>
+<hanoi_gen_start.png, id=541, 1282.7925pt x 717.68124pt>
 File: hanoi_gen_start.png Graphic file (type png)
 
 <use hanoi_gen_start.png>
 Package pdftex.def Info: hanoi_gen_start.png used on input line 151.
 (pdftex.def)             Requested size: 142.26378pt x 79.59128pt.
- <hanoi_gen_mid1.png, id=524, 1284.8pt x 717.68124pt>
+ <hanoi_gen_mid1.png, id=542, 1284.8pt x 717.68124pt>
 File: hanoi_gen_mid1.png Graphic file (type png)
 
 <use hanoi_gen_mid1.png>
 Package pdftex.def Info: hanoi_gen_mid1.png used on input line 151.
 (pdftex.def)             Requested size: 142.26378pt x 79.45987pt.
- <hanoi_gen_mid2.png, id=525, 1284.8pt x 716.6775pt>
+ <hanoi_gen_mid2.png, id=543, 1284.8pt x 716.6775pt>
 File: hanoi_gen_mid2.png Graphic file (type png)
 
 <use hanoi_gen_mid2.png>
 Package pdftex.def Info: hanoi_gen_mid2.png used on input line 151.
 (pdftex.def)             Requested size: 142.26378pt x 79.34874pt.
 
-<hanoi_gen_end.png, id=526, 1282.7925pt x 717.68124pt>
+<hanoi_gen_end.png, id=544, 1282.7925pt x 717.68124pt>
 File: hanoi_gen_end.png Graphic file (type png)
  <use hanoi_gen_end.png>
 Package pdftex.def Info: hanoi_gen_end.png used on input line 151.
@@ -1431,13 +1427,13 @@ _gen_end.png>] [15
 
 ] [16
 
-] <steps_plot.pdf, id=624, 505.89pt x 505.89pt>
+] <steps_plot.pdf, id=641, 505.89pt x 505.89pt>
 File: steps_plot.pdf Graphic file (type pdf)
 
 <use steps_plot.pdf>
 Package pdftex.def Info: steps_plot.pdf used on input line 190.
 (pdftex.def)             Requested size: 107.55333pt x 107.55229pt.
- <time_plot.pdf, id=625, 505.89pt x 505.89pt>
+ <time_plot.pdf, id=642, 505.89pt x 505.89pt>
 File: time_plot.pdf Graphic file (type pdf)
 
 <use time_plot.pdf>
@@ -1446,13 +1442,13 @@ Package pdftex.def Info: time_plot.pdf used on input line 190.
  [17
 
  <./steps_plot.pdf> <./time_plot.pdf>]
-<hanoi_pb_1.png, id=671, 803.0pt x 433.62pt>
+<hanoi_pb_1.png, id=687, 803.0pt x 433.62pt>
 File: hanoi_pb_1.png Graphic file (type png)
  <use hanoi_pb_1.png>
 Package pdftex.def Info: hanoi_pb_1.png used on input line 209.
 (pdftex.def)             Requested size: 107.55333pt x 58.07301pt.
 
-<hanoi_pb_2.png, id=672, 800.9925pt x 436.63126pt>
+<hanoi_pb_2.png, id=688, 800.9925pt x 436.63126pt>
 File: hanoi_pb_2.png Graphic file (type png)
  <use hanoi_pb_2.png>
 Package pdftex.def Info: hanoi_pb_2.png used on input line 209.
@@ -1475,15 +1471,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
  (./beamer.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
+Package rerunfilecheck Info: File `beamer.out' has not changed.
+(rerunfilecheck)             Checksum: BCAF0D4106CA364C6D5FC359404A784E;481.
 
-
-Package rerunfilecheck Warning: File `beamer.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `beamer.out':
-(rerunfilecheck)             Before: 6D4A8D91A2A41A9B9AE4729F56780638;175
-(rerunfilecheck)             After:  BCAF0D4106CA364C6D5FC359404A784E;481.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1491,10 +1481,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
  ) 
 Here is how much of TeX's memory you used:
- 21090 strings out of 494991
- 386067 string characters out of 6180055
- 463248 words of memory out of 5000000
- 23779 multiletter control sequences out of 15000+600000
+ 21097 strings out of 494991
+ 386163 string characters out of 6180055
+ 463251 words of memory out of 5000000
+ 23786 multiletter control sequences out of 15000+600000
  16439 words of font info for 43 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  48i,19n,62p,909b,819s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1508,10 +1498,10 @@ nappen/ec/ecss1095.600pk> </home/clegrand/.texmf-var/fonts/pk/ljfour/jknappen/e
 c/ecss1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb>
-Output written on beamer.pdf (18 pages, 318795 bytes).
+Output written on beamer.pdf (18 pages, 259576 bytes).
 PDF statistics:
- 936 PDF objects out of 1000 (max. 8388607)
- 661 compressed objects within 7 object streams
+ 951 PDF objects out of 1000 (max. 8388607)
+ 676 compressed objects within 7 object streams
  45 named destinations out of 1000 (max. 500000)
- 214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
 
