@@ -9,13 +9,20 @@
 \usepackage{url}%
 \usepackage{graphicx}%
 \usepackage{listings}%
+
 \usepackage[font=scriptsize]{caption}%
 \usepackage{subfig}%
+
+\usepackage{etoolbox}
+\usepackage{ragged2e}%
 
 \title{Projet 1: Pavage de Penrose et Tours de Hanoi}%
 \author{Marco Freire, Clément Legrand-Duchesne}%
 \institute{ENS de Rennes, Département Informatique 1A}%
 \date{1\up{er} septembre 2017}%
+
+%justifies all text appearing on every frame
+\apptocmd{\frame}{}{\justifying}{}%
 
 \begin{document}
 
@@ -55,10 +62,26 @@
 			
 	\section{Tours de Hanoi}
 		\subsection{Principe}
+		
+			\begin{frame}
+				\frametitle{Principe du jeu}
+				\begin{figure}
+					\centering
+					\subfloat[État initial]{\includegraphics[width=5cm]{hanoi_start.png}}\qquad
+					\subfloat[État final]{\includegraphics[width=5cm]{hanoi_end.png}}
+				\end{figure}
+				
+				Le joueur doit déplacer les n disques initiaux du premier piquet au dernier
+				en réalisant un seul mouvement à la fois, et avec la contrainte suivante:
+				aucun disque ne peut être empilé à aucun moment sur un disque de taille inférieure.				
+			\end{frame}
+		
+		%TODO: /!\ cut or resize images /!\
 			\begin{frame}
 				\frametitle{Algorithme simple}
 				\begin{figure}
 					\centering
+					\setcounter{subfigure}{0}
 					\subfloat[État initial]{\includegraphics[width=5cm]{hanoi_start.png}}\qquad
 					\subfloat[Étape 1]{\includegraphics[width=5cm]{hanoi_mid1.png}}
 				\end{figure}	
@@ -70,9 +93,20 @@
 			\end{frame}
 			
 			\begin{frame}
+				\frametitle{Calcul du nombre de déplacements}
+				\begin{description}
+					\item[Initialisation] $M(0) = 1$
+					\item[Relation de récurrence] $M(n) = 2M(n-1) + 1$
+					\item[Relation générale] $M(n) = 2^n - 1$
+				\end{description}
+			\end{frame}
+			
+			\begin{frame}
 				\frametitle{Algorithme généralisé}
 				\begin{figure}
 					\centering
+					%resets figure numbering
+					\setcounter{subfigure}{0}
 					\subfloat[État initial]{\includegraphics[width=5cm]{hanoi_gen_start.png}}\qquad
 					\subfloat[Étape 1]{\includegraphics[width=5cm]{hanoi_gen_mid1.png}}
 				\end{figure}	
@@ -85,12 +119,60 @@
 			
 		\subsection{Implémentation}
 			\begin{frame}
-				EMPTY FRAME
+				\frametitle{Choix et extensions}
+				La situation globale est représentée par un tableau de piles.
+				\bigbreak
+				Extensions créées:
+				\begin{itemize}
+					\item affichage graphique;
+					\item généralisation du problème à n piquets.
+				\end{itemize}
+			\end{frame}
+			
+			\begin{frame}
+				\frametitle{Problèmes rencontrés}
+				Différents problèmes:
+				\begin{enumerate}
+					\item premier algorithme non-généralisable;
+					\item généralisation de l'affichage.
+				\end{enumerate}
 			\end{frame}
 			
 		\subsection{Améliorations}
 			\begin{frame}
-				EMPTY FRAME
+				\frametitle{Algorithme simple}
+				Le nombre de déplacements de disques effectués pas l'algorithme
+				dans le cas où il n'y a que trois piquets est optimal.
+				
+				\begin{figure}
+					\centering
+					\subfloat{\includegraphics[width=.35\linewidth]{steps_plot.pdf}}\qquad
+					\subfloat{\includegraphics[width=.35\linewidth]{time_plot.pdf}}
+				\end{figure}
+				
+				Les résultats expérimentaux sont en accord avec
+				le calcul théorique:le nombre de mouvements
+				le temps d'exécution sont fonction exponentielle du nombre
+				initial de disques
+			\end{frame}
+			
+			\begin{frame}
+				\frametitle{Algorithme généralisé}
+				À ce jour, la solution optimale des Tours de Hanoi à plus de quatre
+				piquets est un problème ouvert.
+				
+				L'algorithme ici utilisé n'utilise pas la totalité de piquets libres.
+				
+				\begin{figure}
+					\centering
+					\setcounter{subfigure}{0}
+					\subfloat[État 1]{\includegraphics[width=.35\linewidth]{hanoi_pb_1.png}}\qquad
+					\subfloat[État 2]{\includegraphics[width=.35\linewidth]{hanoi_pb_2.png}}
+				\end{figure}
+				
+				Dans cette situation, pour passer d'un état à l'autre, uniquement le dernier
+				piquet est utilisé pour stocker des disques, alors que les autres pourraient
+				être utilisés de façon à effectuer moins de mouvements.
 			\end{frame}
 			
 \end{document}

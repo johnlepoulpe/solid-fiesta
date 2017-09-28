@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.11)  28 SEP 2017 13:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.11)  28 SEP 2017 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1133,23 +1133,48 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@subtable@save=\count171
 \sf@top=\skip66
 \sf@bottom=\skip67
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count172
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip68
+\RaggedLeftLeftskip=\skip69
+\RaggedRightLeftskip=\skip70
+\CenteringRightskip=\skip71
+\RaggedLeftRightskip=\skip72
+\RaggedRightRightskip=\skip73
+\CenteringParfillskip=\skip74
+\RaggedLeftParfillskip=\skip75
+\RaggedRightParfillskip=\skip76
+\JustifyingParfillskip=\skip77
+\CenteringParindent=\skip78
+\RaggedLeftParindent=\skip79
+\RaggedRightParindent=\skip80
+\JustifyingParindent=\skip81
 ) (./beamer.aux)
 \openout1 = `beamer.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1187,16 +1212,16 @@ LaTeX Font Info:    ... okay on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count172
+\scratchcounter=\count173
 \scratchdimen=\dimen259
 \scratchbox=\box55
-\nofMPsegments=\count173
-\nofMParguments=\count174
+\nofMPsegments=\count174
+\nofMParguments=\count175
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count175
+\MPscratchCnt=\count176
 \MPscratchDim=\dimen260
-\MPnumerator=\count176
-\makeMPintoPDFobject=\count177
+\MPnumerator=\count177
+\makeMPintoPDFobject=\count178
 \everyMPtoPDFconversion=\toks48
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1215,7 +1240,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1223,58 +1248,58 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count178
+\c@section@level=\count179
 )
-LaTeX Info: Redefining \ref on input line 20.
-LaTeX Info: Redefining \pageref on input line 20.
-LaTeX Info: Redefining \nameref on input line 20.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./beamer.out) (./beamer.out)
 \@outlinefile=\write5
 \openout5 = `beamer.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 20.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 20.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 27.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 20.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 20.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 20.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 20.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 20.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 20.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 20.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 20.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 20.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 20.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 20.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 20.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 20.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 20.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 20.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 20.
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 20.
+(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 20.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 20.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 20.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1300,18 +1325,21 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 20.
-LaTeX Info: Redefining \degres on input line 20.
-LaTeX Info: Redefining \dots on input line 20.
-LaTeX Info: Redefining \up on input line 20.
-\c@lstlisting=\count179
+LaTeX Info: Redefining \includegraphics on input line 27.
+LaTeX Info: Redefining \degres on input line 27.
+LaTeX Info: Redefining \dots on input line 27.
+LaTeX Info: Redefining \up on input line 27.
+\c@lstlisting=\count180
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 27.
  (./beamer.nav)
 
 LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 27.
+(Font)              size <5> substituted on input line 34.
 
 [1
 
@@ -1324,72 +1352,124 @@ LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
 
 ] [5
 
-] <hanoi_start.png, id=225, 803.0pt x 630.355pt>
+] <hanoi_start.png, id=226, 803.0pt x 630.355pt>
 File: hanoi_start.png Graphic file (type png)
 
 <use hanoi_start.png>
-Package pdftex.def Info: hanoi_start.png used on input line 70.
+Package pdftex.def Info: hanoi_start.png used on input line 77.
 (pdftex.def)             Requested size: 142.26378pt x 111.66997pt.
- <hanoi_mid1.png, id=227, 803.0pt x 630.355pt>
-File: hanoi_mid1.png Graphic file (type png)
-
-<use hanoi_mid1.png>
-Package pdftex.def Info: hanoi_mid1.png used on input line 70.
-(pdftex.def)             Requested size: 142.26378pt x 111.66997pt.
- <hanoi_mid2.png, id=228, 803.0pt x 630.355pt>
-File: hanoi_mid2.png Graphic file (type png)
-
-<use hanoi_mid2.png>
-Package pdftex.def Info: hanoi_mid2.png used on input line 70.
-(pdftex.def)             Requested size: 142.26378pt x 111.66997pt.
- <hanoi_end.png, id=229, 803.0pt x 630.355pt>
+ <hanoi_end.png, id=228, 803.0pt x 630.355pt>
 File: hanoi_end.png Graphic file (type png)
 
 <use hanoi_end.png>
-Package pdftex.def Info: hanoi_end.png used on input line 70.
+Package pdftex.def Info: hanoi_end.png used on input line 77.
+(pdftex.def)             Requested size: 142.26378pt x 111.66997pt.
+ [6
+
+ <./hanoi_start.png> <./hanoi_end.png>]
+File: hanoi_start.png Graphic file (type png)
+
+<use hanoi_start.png>
+Package pdftex.def Info: hanoi_start.png used on input line 93.
+(pdftex.def)             Requested size: 142.26378pt x 111.66997pt.
+ <hanoi_mid1.png, id=266, 803.0pt x 630.355pt>
+File: hanoi_mid1.png Graphic file (type png)
+
+<use hanoi_mid1.png>
+Package pdftex.def Info: hanoi_mid1.png used on input line 93.
+(pdftex.def)             Requested size: 142.26378pt x 111.66997pt.
+ <hanoi_mid2.png, id=267, 803.0pt x 630.355pt>
+File: hanoi_mid2.png Graphic file (type png)
+
+<use hanoi_mid2.png>
+Package pdftex.def Info: hanoi_mid2.png used on input line 93.
+(pdftex.def)             Requested size: 142.26378pt x 111.66997pt.
+File: hanoi_end.png Graphic file (type png)
+ <use hanoi_end.png>
+Package pdftex.def Info: hanoi_end.png used on input line 93.
 (pdftex.def)             Requested size: 142.26378pt x 111.66997pt.
 
-Overfull \vbox (89.29935pt too high) detected at line 70
- []
-
-[6
-
- <./hanoi_start.png> <./hanoi_mid1.png> <./hanoi_mid2.png> <./hanoi_end.png>] <
-hanoi_gen_start.png, id=268, 1284.8pt x 746.79pt>
-File: hanoi_gen_start.png Graphic file (type png)
- <use hanoi_gen_start.png>
-Package pdftex.def Info: hanoi_gen_start.png used on input line 84.
-(pdftex.def)             Requested size: 142.26378pt x 82.68271pt.
-
-<hanoi_gen_mid1.png, id=269, 1284.8pt x 746.79pt>
-File: hanoi_gen_mid1.png Graphic file (type png)
- <use hanoi_gen_mid1.png>
-Package pdftex.def Info: hanoi_gen_mid1.png used on input line 84.
-(pdftex.def)             Requested size: 142.26378pt x 82.68271pt.
-
-<hanoi_gen_mid2.png, id=270, 1284.8pt x 746.79pt>
-File: hanoi_gen_mid2.png Graphic file (type png)
- <use hanoi_gen_mid2.png>
-Package pdftex.def Info: hanoi_gen_mid2.png used on input line 84.
-(pdftex.def)             Requested size: 142.26378pt x 82.68271pt.
-
-<hanoi_gen_end.png, id=271, 1284.8pt x 746.79pt>
-File: hanoi_gen_end.png Graphic file (type png)
- <use hanoi_gen_end.png>
-Package pdftex.def Info: hanoi_gen_end.png used on input line 84.
-(pdftex.def)             Requested size: 142.26378pt x 82.68271pt.
-
-Overfull \vbox (31.32483pt too high) detected at line 84
+Overfull \vbox (89.29935pt too high) detected at line 93
  []
 
 [7
 
- <./hanoi_gen_start.png> <./hanoi_gen_mid1.png> <./hanoi_gen_mid2.png> <./hanoi
-_gen_end.png>] [8
+ <./hanoi_mid1.png> <./hanoi_mid2.png>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
 
-] [9
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [8
 
 ]
+<hanoi_gen_start.png, id=336, 1284.8pt x 746.79pt>
+File: hanoi_gen_start.png Graphic file (type png)
+ <use hanoi_gen_start.png>
+Package pdftex.def Info: hanoi_gen_start.png used on input line 118.
+(pdftex.def)             Requested size: 142.26378pt x 82.68271pt.
+
+<hanoi_gen_mid1.png, id=337, 1284.8pt x 746.79pt>
+File: hanoi_gen_mid1.png Graphic file (type png)
+ <use hanoi_gen_mid1.png>
+Package pdftex.def Info: hanoi_gen_mid1.png used on input line 118.
+(pdftex.def)             Requested size: 142.26378pt x 82.68271pt.
+
+<hanoi_gen_mid2.png, id=338, 1284.8pt x 746.79pt>
+File: hanoi_gen_mid2.png Graphic file (type png)
+ <use hanoi_gen_mid2.png>
+Package pdftex.def Info: hanoi_gen_mid2.png used on input line 118.
+(pdftex.def)             Requested size: 142.26378pt x 82.68271pt.
+
+<hanoi_gen_end.png, id=339, 1284.8pt x 746.79pt>
+File: hanoi_gen_end.png Graphic file (type png)
+ <use hanoi_gen_end.png>
+Package pdftex.def Info: hanoi_gen_end.png used on input line 118.
+(pdftex.def)             Requested size: 142.26378pt x 82.68271pt.
+
+Overfull \vbox (31.32483pt too high) detected at line 118
+ []
+
+[9
+
+ <./hanoi_gen_start.png> <./hanoi_gen_mid1.png> <./hanoi_gen_mid2.png> <./hanoi
+_gen_end.png>] [10
+
+] [11
+
+] <steps_plot.pdf, id=436, 505.89pt x 505.89pt>
+File: steps_plot.pdf Graphic file (type pdf)
+
+<use steps_plot.pdf>
+Package pdftex.def Info: steps_plot.pdf used on input line 157.
+(pdftex.def)             Requested size: 107.55333pt x 107.55229pt.
+ <time_plot.pdf, id=437, 505.89pt x 505.89pt>
+File: time_plot.pdf Graphic file (type pdf)
+
+<use time_plot.pdf>
+Package pdftex.def Info: time_plot.pdf used on input line 157.
+(pdftex.def)             Requested size: 107.55333pt x 107.55229pt.
+ [12
+
+ <./steps_plot.pdf> <./time_plot.pdf>]
+<hanoi_pb_1.png, id=483, 803.0pt x 630.355pt>
+File: hanoi_pb_1.png Graphic file (type png)
+ <use hanoi_pb_1.png>
+Package pdftex.def Info: hanoi_pb_1.png used on input line 176.
+(pdftex.def)             Requested size: 107.55333pt x 84.42096pt.
+
+<hanoi_pb_2.png, id=484, 803.0pt x 630.355pt>
+File: hanoi_pb_2.png Graphic file (type png)
+ <use hanoi_pb_2.png>
+Package pdftex.def Info: hanoi_pb_2.png used on input line 176.
+(pdftex.def)             Requested size: 107.55333pt x 84.42096pt.
+ [13
+
+ <./hanoi_pb_1.png> <./hanoi_pb_2.png>]
 \tf@nav=\write6
 \openout6 = `beamer.nav'.
 
@@ -1399,39 +1479,42 @@ _gen_end.png>] [8
 \tf@snm=\write8
 \openout8 = `beamer.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
  (./beamer.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
 Package rerunfilecheck Info: File `beamer.out' has not changed.
-(rerunfilecheck)             Checksum: DFC5A850CE148B415E54099A54AD676B;477.
+(rerunfilecheck)             Checksum: 55B49B91F5D977274FD816B37C5A1791;479.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 178.
  ) 
 Here is how much of TeX's memory you used:
- 20695 strings out of 494924
- 380355 string characters out of 6179708
- 458768 words of memory out of 5000000
- 23518 multiletter control sequences out of 15000+600000
- 10396 words of font info for 24 fonts, out of 8000000 for 9000
+ 21201 strings out of 494924
+ 388121 string characters out of 6179708
+ 466497 words of memory out of 5000000
+ 23982 multiletter control sequences out of 15000+600000
+ 17212 words of font info for 44 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,19n,62p,386b,813s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.600pk> </home/m
-arco/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1000.600pk> </home/marco/.texmf
--var/fonts/pk/ljfour/jknappen/ec/ecss0600.600pk> </home/marco/.texmf-var/fonts/
-pk/ljfour/jknappen/ec/ecss0700.600pk> </home/marco/.texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecss0800.600pk> </home/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecss1095.600pk> </home/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.60
-0pk>
-Output written on beamer.pdf (9 pages, 162635 bytes).
+ 48i,19n,62p,909b,813s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi0800.600pk> </home/m
+arco/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1095.600pk> </home/marco/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecss0900.600pk> </home/marco/.texmf-var/fonts/
+pk/ljfour/jknappen/ec/ecss1000.600pk> </home/marco/.texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecss0600.600pk> </home/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecss0700.600pk> </home/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.60
+0pk> </home/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.600pk> </home
+/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.600pk></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on beamer.pdf (13 pages, 238891 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 353 compressed objects within 4 object streams
- 27 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 730 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
