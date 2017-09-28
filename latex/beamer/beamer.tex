@@ -10,6 +10,7 @@
 \usepackage{graphicx}%
 \usepackage{listings}%
 \usepackage[font=scriptsize]{caption}%
+\usepackage{subfig}%
 
 \title{Projet 1: Pavage de Penrose et Tours de Hanoi}%
 \author{Marco Freire, Clément Legrand-Duchesne}%
@@ -24,6 +25,7 @@
 		\begin{frame}
 			\titlepage
 		\end{frame}
+	\endgroup
 	
 	%prevents header from appearing on table of contents and displays
 	%plan as frame title	
@@ -38,21 +40,7 @@
 	\section{Pavage de Penrose}
 		\subsection{Principe}
 			\begin{frame}
-				\frametitle{Algorithme de base}		
-				\begin{columns}
-					\column{2in}
-						\begin{figure}
-							\centering
-							\subcaptionbox{subcaption}{\includegraphics[width=\linewidth]{hanoi_start.png}}\\
-							\subcaptionbox{subcaption}{\includegraphics[width=\linewidth]{hanoi_mid1.png}}
-						\end{figure}
-					\column{2in}
-						\begin{figure}
-							\centering
-							\subcaptionbox{subcaption}{\includegraphics[width=\linewidth]{hanoi_mid2.png}}\\
-							\subcaptionbox{subcaption}{\includegraphics[width=\linewidth]{hanoi_end.png}}
-						\end{figure}
-				\end{columns}
+				EMPTY FRAME
 			\end{frame}		
 		
 		\subsection{Implémentation}
@@ -68,7 +56,31 @@
 	\section{Tours de Hanoi}
 		\subsection{Principe}
 			\begin{frame}
-				EMPTY FRAME
+				\frametitle{Algorithme simple}
+				\begin{figure}
+					\centering
+					\subfloat[État initial]{\includegraphics[width=5cm]{hanoi_start.png}}\qquad
+					\subfloat[Étape 1]{\includegraphics[width=5cm]{hanoi_mid1.png}}
+				\end{figure}	
+				\begin{figure}
+					\centering
+					\subfloat[Étape 2]{\includegraphics[width=5cm]{hanoi_mid2.png}}\qquad
+					\subfloat[État final]{\includegraphics[width=5cm]{hanoi_end.png}}
+				\end{figure}
+			\end{frame}
+			
+			\begin{frame}
+				\frametitle{Algorithme généralisé}
+				\begin{figure}
+					\centering
+					\subfloat[État initial]{\includegraphics[width=5cm]{hanoi_gen_start.png}}\qquad
+					\subfloat[Étape 1]{\includegraphics[width=5cm]{hanoi_gen_mid1.png}}
+				\end{figure}	
+				\begin{figure}
+					\centering
+					\subfloat[Étape 2]{\includegraphics[width=5cm]{hanoi_gen_mid2.png}}\qquad
+					\subfloat[État final]{\includegraphics[width=5cm]{hanoi_gen_end.png}}
+				\end{figure}
 			\end{frame}
 			
 		\subsection{Implémentation}

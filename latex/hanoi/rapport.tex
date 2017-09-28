@@ -56,85 +56,6 @@
 
 \section{Penrose}
 
-        \subsection{Principe: algorithme de base}
-                Le pavage de Penrose implémenté utilise deux tuiles de
-                base, des triangles d'or. Les dimensions de leurs
-                côtés sont donc des des nombres flottants. Afin
-                d'éviter des erreurs d'arrondi suceptibles de ce
-                cumuler, et d'alléger le code, nous avons choisi de ne
-                travailler qu'avec des flottants, avant des les
-                arrondir en entiers juste avant le tracé.
-                
-                Par commodité, nous avons suivi la convention
-                suivante: les triangles seront représentés par un
-                tableau contenant les coordonnées des trois sommets,
-                le premier étant celui duquel sont issus les deux
-                cotés de longeurs égales, le second est le suivant en
-                tournant dans le sens horaire.
-
-                Inserer image!
-
-                Afin de differentier les triangles obtus des triangles
-                aigus, nous avons créé un type \texttt{triangle}:
-
-		\begin{lstlisting}
-                  type triangle = Obtuse | Acute;;
-		\end{lstlisting}
-
-                Une des principales difficultés rencontrées lors de
-                l'implémentation de ce pavage est le fait la fonction
-                \texttt{fill\_poly} du module \texttt{Graphics.cma}
-                remplit le polygone avec une couleur donnée, mais
-                recouvre et donc efface les bords de celui ci si ceux
-                ci ont été tracés avant. Cela n'est pas encore trop
-                contraignant ici, puisqu'il suffit d'écrire la
-                fonction \texttt{draw} de la sorte:
-
-                \begin{lstlisting}
-                  let draw points triangle =
-                      (if triangle = Obtuse then set_color red
-                      else set_color blue);
-                      fill_poly (iof_array points);
-                      move points.(0);
-                      set_color black;
-                      line points.(1);  
-                      line points.(2);
-                      line points.(0)
-                  ;;
-                \end{lstlisting}
-                
-	\subsection{Améliorations}
-		Le premier problème du code précédent est que les
-                côtés des triangles sont tous tracés deux fois. Pour y
-                remédier, il suffit, lors de chaque subdivision d'un
-                triangle, de ne tracer que les séparations entre les
-                nouveaux triangles obtenus (et de ne pas oublier les
-                cotés du triangle initial).
-
-		Inserer une image! (+ peuve?)
-
-		Il apparaît alors qu'il est necéssaire de tracer ces
-                lignes après que les triangles soient remplis, afin
-                que celles ci ne soient pas effacées.
-		La fonction \texttt{divide} est en réalité un simple
-                parcours en profondeur de l'arbre des divisions des triangles.		
-		Plutôt que d'afficher directement le pavage, il semble
-                plus interressant de montrer la division succéssive
-                des triangles pendant la construction du
-                pavage. Survient alors une nouvelle difficulté:
-                l'algorithme de parcours en profondeur décrit
-                précédemment ne convient plus. 
-		Une première solution est d'implémenter un parcours
-                largeur et de marquer une pause avant d'entamer chaque
-                nouvelle profondeur de l'arbre. il faut pour cela
-                maintenir une structure de file   En revanche, il est
-                alors nettement plus difficle d'afficher les couleurs
-                des triangles dessinés à chaque génération et de ne
-                tracer chaque coté qu'une seule fois. En effet, à
-                chaque nouvelle génération, la coloration des
-                triangles efface les cotés de ceux ci si ils ont été
-                précédemment tracés. 
-
 \section{Hanoi}
 
 	\subsection{Principe: algorithme de base}
@@ -266,6 +187,3 @@
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-TODO: 
-   - [ ] inserer une image de triangle avec la numérotation des sommets
