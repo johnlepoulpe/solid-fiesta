@@ -81,18 +81,73 @@
 			
                         \begin{frame}
                           \frametitle{Limite du premier algorithme}
-                          \begin{enumerate}
+                          Algorithme assez limité:
+                          \begin{itemize}
                             \item parcours en profondeur de l'arbre
                               des découpes;
+                            \item chaque côté des triangles est tracé
+                              deux fois;
                             \item le remplissage des triangles efface
                               les bordures si celles ci ont été
                               tracées avant.
-                            \end{enumerate}
+                            \end{itemize}
+                          Travail sur des flottants jusqu'à
+                          l'affichage: évite les problèmes d'arrondis.
                           \end{frame}
+
 		\subsection{Améliorations}
 			\begin{frame}
-				EMPTY FRAME
+                          \frametitle{Tracé unique des côtés}
+                          Afin de ne tracer qu'une fois chaque coté du
+                          triangle, on ne dessine que les séparations
+                          internes à chaque nouvelle génération.
+                          \begin{center}
+                            \includegraphics[width=.5\linewidth]{anim1.pdf}%
+                          \end{center}
 			\end{frame}
+
+                        \begin{frame}
+                          \frametitle{Affichage successif de chacune
+                            des générations}
+                          \underline{Parcours largeur:}
+                          \begin{itemize}
+                          \item permet d'afficher chaque
+                            génération successivement sans tout
+                            recalculer;
+                          \item complexité mémoire importante
+                            (nécessite une structure file);
+                          \item impossibilité de colorier les
+                            triangles à chaque génération sans effacer
+                            les cotés de ceux dessinés lors de la précédente génération.
+                          \end{itemize}
+
+
+                          \underline{Plusieurs parcours profondeur
+                            successifs:}
+                          \begin{itemize}
+                            \item complexité mémoire faible mais
+                              algorithme deux fois plus long;
+                            \item Possibilité de colorier les
+                              triangles et de ne tracer leurs côtés
+                              qu'une seule fois;
+                            \item homothétie plus facilement implémentable.
+                            \end{itemize}
+                        \end{frame}
+
+                        \begin{frame}
+                          \frametitle{Version definitive avec
+                            homthétie}
+                          \begin{center}
+                            \includegraphics<+>[width=.8\linewidth]{pen_up1.pdf}%
+                            \includegraphics<+>[width=.8\linewidth]{pen_up2.pdf}%
+                            \includegraphics<+>[width=.8\linewidth]{pen_up3.pdf}%
+                            \includegraphics<+>[width=.8\linewidth]{pen_up4.pdf}%
+                            \includegraphics<+>[width=.8\linewidth]{pen_up5.pdf}%
+                            \includegraphics<+>[width=.8\linewidth]{pen_up6.pdf}%
+
+                            Execution de l'algorithme
+                          \end{center}
+                        \end{frame}
 			
 	\section{Tours de Hanoi}
 		\subsection{Principe}
