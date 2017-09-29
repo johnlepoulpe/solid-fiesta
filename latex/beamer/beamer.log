@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.25)  29 SEP 2017 01:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.25)  29 SEP 2017 02:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1552,9 +1552,9 @@ nappen/ec/ecss1095.600pk> </home/clegrand/.texmf-var/fonts/pk/ljfour/jknappen/e
 c/ecss1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb>
-Output written on beamer.pdf (25 pages, 1391378 bytes).
+Output written on beamer.pdf (25 pages, 1391689 bytes).
 PDF statistics:
- 1363 PDF objects out of 1440 (max. 8388607)
+ 1364 PDF objects out of 1440 (max. 8388607)
  996 compressed objects within 10 object streams
  59 named destinations out of 1000 (max. 500000)
  284 words of extra memory for PDF output out of 10000 (max. 10000000)
