@@ -47,9 +47,21 @@
 \maketitle
 
 \begin{abstract}
-  Dans ce rapport seront expliqués les codes du pavage de Penrose et des
-  tours de Hanoi, ainsi que leurs extensions; et les choix d'implémentation
-  que nous avons été menés à faire.
+  Dans ce rapport seront expliqués les codes du pavage de Penrose
+  suivant différents types de parcours, et des tours de Hanoi, problème
+  à contrainte résolu récursivement, ainsi que leurs extensions; et les
+  choix d'implémentation que nous avons été menés à faire.
+  \begin{description}
+    
+  \item[Mots-clés:] Pavage; parcours; récursivité; contrainte.
+
+   
+%\item[Classification ACM:] Voir les codes à l'adresse
+%  \begin{center}
+%    \url{http://www.acm.org/about/class/class/2012}.
+%  \end{center}
+
+  \end{description}
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -131,25 +143,49 @@
 		Lors de l'implémentation de la fonction résolvant le problème des tours
 		de Hanoi à n poteaux, nous nous sommes rendu compte que la fonction
 		\texttt{choose} était difficilement généralisable. Nous avons donc choisi
-		de passer le poteau intermédiaire en argument à la fonction \texttt{move}:
-
-		\begin{lstlisting}
-		let rec move rods num_discs orig_rod dest_rod temp_rod=
-		  if num_discs = 1 then
-			  move_disc rods orig_rod dest_rod
-		  else
-			(
-			  move rods (num_discs - 1) orig_rod temp_rod dest_rod;
-			  
-			  move_disc rods orig_rod dest_rod;
-			  
-			  move rods (num_discs - 1) temp_rod dest_rod orig_rod;
-			)
-		;;
-		\end{lstlisting}
+		de passer le poteau intermédiaire en argument à la fonction \texttt{move}.
 
 		Cette modification permet de choisir comme l'on veut le poteau intermédiaire,
 		ce qui est nécessaire pour la version généralisée de l'algorithme.
+	
+	\subsection{Analyse du problème}
+		
+		Il est possible de calculer le nombre minimal de déplacements à effectuer
+		pour résoudre le problème.
+		
+		Si l'on veut déplacer n disques du premier piquet au dernier, il
+		faut nécessairement déplacer le plus grand. Or il n'est possible
+		de le déplacer que si les (n-1) disques plus petits ne sont pas
+		sur celui-ci. Puisque l'on veut déplacer le plus grand disque sur
+		le dernier piquet, les (n-1) disques doivent se trouver empilés
+		en ordre décroissant de taille sur le piquet central; dans quel
+		cas on peut déplacer le grand disque sur le dernier poteau, et
+		déplacer encore les autres disques sur le dernier piquet.
+		
+		On a ainsi la relation de récurrence suivante, qui se résout facilement:
+		
+		\begin{description}
+			\item[Initialisation] $M(1) = 1$
+			\item[Relation de récurrence] $M(n) = 2M(n-1) + 1$
+			\item[Relation générale] $M(n) = 2^n - 1$
+		\end{description}
+		
+		Le nombre de déplacements de disques effectués pas l'algorithme
+		dans le cas où il n'y a que trois piquets est optimal.
+				
+		\begin{figure}[!h]
+			\minipage{0.49\textwidth}
+			  \includegraphics[width=\linewidth]{steps_plot.pdf}
+			\endminipage\hfill
+			\minipage{0.49\textwidth}
+			  \includegraphics[width=\linewidth]{time_plot.pdf}
+			\endminipage\hfill
+		\end{figure}
+			
+		Les résultats expérimentaux sont en accord avec
+		le calcul théorique: le nombre de mouvements
+		est fonction exponentielle du nombre
+		initial de disques.
 	
 	\subsection{Principe: algorithme généralisé}
 		Pour ce problème, l'implémentation choisie est la deuxième présentée.
@@ -183,7 +219,92 @@
 		
 		Ainsi beaucoup moins de déplacements sont nécessaires pour la résolution
 		du problème.
+	
+	\subsection{Affichage}
+		Nous avons créé un affichage grâce au module \texttt{Graphics}
+		de OCaml qui permet de visualiser la résolution du problème à n
+		disques et p poteaux pour n et p raisonnables.
+		
+		\begin{figure}[!h]
+			\minipage{0.49\textwidth}
+			  \includegraphics[width=\linewidth]{hanoi_10_4.png}
+			  \caption{Affichage de \texttt{hanoi 10 4}}
+			\endminipage\hfill
+			\minipage{0.49\textwidth}
+			  \includegraphics[width=\linewidth]{hanoi_35_10.png}
+			  \caption{Affichage de \texttt{hanoi 35 10}}
+			\endminipage\hfill
+		\end{figure}
+		
+		De plus l'affichage s'adapte à la taille de la fenêtre:
+		
+		\begin{figure}[!h]
+			\minipage{0.49\textwidth}
+			\begin{center}
+			  \includegraphics[width=7cm]{hanoi_wide.png}
+			  \caption{1200 x 200}
+			\end{center}
+			\endminipage\hfill
+			\minipage{0.49\textwidth}
+			\begin{center}
+			  \includegraphics[height=5cm]{hanoi_tall.png}
+			  \caption{350 x 750}
+			\end{center}
+			\endminipage\hfill
+		\end{figure}
+	
+		La taille des disques est donc variable et dépend de plusieurs
+		facteurs: au moins il y a de poteaux et au plus la fenêtre est
+		large, au plus les disques sont larges; au plus il y a de disques
+		et au plus la fenêtre est grande, au plus les disques sont hauts.
+	
+	\subsection{Améliorations}
+		Nous nous sommes rendus compte qu'il était possible d'améliorer
+		l'algorithme généralisé, puisqu'on observe que à chaque fois
+		qu'un pile de disques est déplacée, seul le premier ou le dernier
+		piquet est utilisé comme piquet temporaire, alors que l'on dispose
+		de plusieurs piquets libres.
+	
+\section*{Conclusion}
 
+	\begin{itemize}
+		\item Nous avons implémenté le programme dessinant le pavage de
+		Penrose, à l'aide d'un parcours en profondeur ou d'un parcours
+		en largeur, avec la possibilité d'utiliser une homothétie pour
+		agrandir la figure à chaque génération; puis le programme résolvant
+		le problème des tours de Hanoi simple et généralisé, avec affichage
+		graphique.
+		%\item Ce que vous avez choisi de ne pas faire.
+		\item Il serait intéressant d'implémenter pour les pavages de Penrose
+		une version où l'un des triangles serait fixe au cours des générations
+		afin de créer l'illusion de la construction du motif autour d'un
+		seul triangle.
+		Pour les tours de Hanoi, il serait possible de corriger l'algorithme
+		généralisé et utiliser tous les piquets libres à notre disposition
+		afin de résoudre le problème en moins de déplacements.
+	\end{itemize}
+
+\appendix
+
+\section*{Auto-Évaluation}
+
+	%Votre auto-évaluation selon le schéma SWOT/FFOM~(\url{https://fr.wikipedia.org/wiki/SWOT}).
+	\begin{description}
+		\item[Forces.] En ce qui concerne la partie consacrée au Tours de Hanoi
+		je pense que le point fort est l'affichage très flexible que nous avons
+		implémenté.
+		\item[Faiblesses.]  Le manque de modularité et de séparation du code
+		s'est vu très pénible au moment d'harmoniser les différentes versions
+		du code à envoyer (algorithme basique, généralisé et avec affichage).
+		\item[Opportunités.] Ce projet m'a appris l'importance de la modularité
+		du code, pour les raisons avant mentionnées, et aussi à gérer un projet
+		mené par plusieurs personnes, ce qui peut s'avérer plus difficile que
+		prévu.
+		\item[Menaces.] Il est trop souvent facile de remplir le code de
+		littéraux et de constantes, mais quand il faut généraliser le
+		code déjà écrit, cet effort non effectué fait perdre énormément de temps.
+	\end{description}
+	
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

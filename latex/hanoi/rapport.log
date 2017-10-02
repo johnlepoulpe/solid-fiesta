@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.11)  28 SEP 2017 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.11)  2 OCT 2017 20:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -590,43 +590,44 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 57.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 61.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 73.
 
 <hanoi_start.png, id=1, 803.0pt x 630.355pt>
 File: hanoi_start.png Graphic file (type png)
  <use hanoi_start.png>
-Package pdftex.def Info: hanoi_start.png used on input line 70.
+Package pdftex.def Info: hanoi_start.png used on input line 82.
 (pdftex.def)             Requested size: 108.71478pt x 85.3347pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 71.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <8> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 71.
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 83.
 
 <hanoi_mid1.png, id=3, 803.0pt x 630.355pt>
 File: hanoi_mid1.png Graphic file (type png)
  <use hanoi_mid1.png>
-Package pdftex.def Info: hanoi_mid1.png used on input line 74.
+Package pdftex.def Info: hanoi_mid1.png used on input line 86.
 (pdftex.def)             Requested size: 108.71478pt x 85.3347pt.
 
 <hanoi_mid2.png, id=4, 803.0pt x 630.355pt>
 File: hanoi_mid2.png Graphic file (type png)
  <use hanoi_mid2.png>
-Package pdftex.def Info: hanoi_mid2.png used on input line 78.
+Package pdftex.def Info: hanoi_mid2.png used on input line 90.
 (pdftex.def)             Requested size: 108.71478pt x 85.3347pt.
 
 <hanoi_end.png, id=5, 803.0pt x 630.355pt>
 File: hanoi_end.png Graphic file (type png)
  <use hanoi_end.png>
-Package pdftex.def Info: hanoi_end.png used on input line 82.
+Package pdftex.def Info: hanoi_end.png used on input line 94.
 (pdftex.def)             Requested size: 108.71478pt x 85.3347pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 88.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 100.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 95.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 107.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -634,55 +635,100 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./hanoi_start.png> <./hano
 i_mid1.png> <./hanoi_mid2.png> <./hanoi_end.png>]
-<hanoi_gen_start.png, id=20, 1284.8pt x 746.79pt>
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 168.
+ <steps_plot.pdf, id=20, 505.89pt x 505.89pt>
+File: steps_plot.pdf Graphic file (type pdf)
+
+<use steps_plot.pdf>
+Package pdftex.def Info: steps_plot.pdf used on input line 178.
+(pdftex.def)             Requested size: 221.95676pt x 221.9593pt.
+ <time_plot.pdf, id=21, 505.89pt x 505.89pt>
+File: time_plot.pdf Graphic file (type pdf)
+
+<use time_plot.pdf>
+Package pdftex.def Info: time_plot.pdf used on input line 181.
+(pdftex.def)             Requested size: 221.95676pt x 221.9593pt.
+ [2] <hanoi_gen_start.png, id=29, 1284.8pt x 746.79pt>
 File: hanoi_gen_start.png Graphic file (type png)
- <use hanoi_gen_start.png>
-Package pdftex.def Info: hanoi_gen_start.png used on input line 167.
-(pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
 
-<hanoi_gen_mid1.png, id=21, 1284.8pt x 746.79pt>
+<use hanoi_gen_start.png>
+Package pdftex.def Info: hanoi_gen_start.png used on input line 203.
+(pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
+ <hanoi_gen_mid1.png, id=30, 1284.8pt x 746.79pt>
 File: hanoi_gen_mid1.png Graphic file (type png)
- <use hanoi_gen_mid1.png>
-Package pdftex.def Info: hanoi_gen_mid1.png used on input line 171.
-(pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
 
-<hanoi_gen_mid2.png, id=22, 1284.8pt x 746.79pt>
+<use hanoi_gen_mid1.png>
+Package pdftex.def Info: hanoi_gen_mid1.png used on input line 207.
+(pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
+ <hanoi_gen_mid2.png, id=31, 1284.8pt x 746.79pt>
 File: hanoi_gen_mid2.png Graphic file (type png)
- <use hanoi_gen_mid2.png>
-Package pdftex.def Info: hanoi_gen_mid2.png used on input line 175.
-(pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
 
-<hanoi_gen_end.png, id=23, 1284.8pt x 746.79pt>
-File: hanoi_gen_end.png Graphic file (type png)
- <use hanoi_gen_end.png>
-Package pdftex.def Info: hanoi_gen_end.png used on input line 179.
+<use hanoi_gen_mid2.png>
+Package pdftex.def Info: hanoi_gen_mid2.png used on input line 211.
 (pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
+ <hanoi_gen_end.png, id=32, 1284.8pt x 746.79pt>
+File: hanoi_gen_end.png Graphic file (type png)
+
+<use hanoi_gen_end.png>
+Package pdftex.def Info: hanoi_gen_end.png used on input line 215.
+(pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
+ <hanoi_10_4.png, id=33, 803.0pt x 630.355pt>
+File: hanoi_10_4.png Graphic file (type png)
+
+<use hanoi_10_4.png>
+Package pdftex.def Info: hanoi_10_4.png used on input line 230.
+(pdftex.def)             Requested size: 221.95676pt x 174.23785pt.
+ <hanoi_35_10.png, id=34, 803.0pt x 630.355pt>
+File: hanoi_35_10.png Graphic file (type png)
+
+<use hanoi_35_10.png>
+Package pdftex.def Info: hanoi_35_10.png used on input line 234.
+(pdftex.def)             Requested size: 221.95676pt x 174.23785pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2] [3 <./hanoi_gen_start.png> <./hanoi_gen_mid1.png> <./hanoi_gen_mid2.png> <.
-/hanoi_gen_end.png>] (./rapport.aux) ) 
+<hanoi_wide.png, id=35, 1204.5pt x 228.855pt>
+File: hanoi_wide.png Graphic file (type png)
+ <use hanoi_wide.png>
+Package pdftex.def Info: hanoi_wide.png used on input line 244.
+(pdftex.def)             Requested size: 199.16928pt x 37.83975pt.
+
+<hanoi_tall.png, id=36, 351.3125pt x 746.79pt>
+File: hanoi_tall.png Graphic file (type png)
+ <use hanoi_tall.png>
+Package pdftex.def Info: hanoi_tall.png used on input line 250.
+(pdftex.def)             Requested size: 66.9216pt x 142.26378pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <./steps_plot.pdf> <./time_plot.pdf> <./hanoi_gen_start.png> <./hanoi_gen_mi
+d1.png> <./hanoi_gen_mid2.png> <./hanoi_gen_end.png>] [4 <./hanoi_10_4.png> <./
+hanoi_35_10.png> <./hanoi_wide.png> <./hanoi_tall.png>] [5] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 6295 strings out of 494924
- 89414 string characters out of 6179708
- 175625 words of memory out of 5000000
- 9472 multiletter control sequences out of 15000+600000
- 40559 words of font info for 81 fonts, out of 8000000 for 9000
+ 6339 strings out of 494924
+ 90059 string characters out of 6179708
+ 171625 words of memory out of 5000000
+ 9499 multiletter control sequences out of 15000+600000
+ 45997 words of font info for 94 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,7n,49p,241b,1663s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/marco/.texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecss0900.600pk> </home/marco/.texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecsx0900.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/palatino/uplr8a.pfb>
-Output written on rapport.pdf (3 pages, 173564 bytes).
+{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/marco/.texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecss0900.600pk> </home/marco/.texmf-var/fonts/pk
+/ljfour/jknappen/ec/ecsx0900.600pk></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/
+ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on rapport.pdf (5 pages, 223296 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 139 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
