@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.25)  3 OCT 2017 18:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.7.25)  3 OCT 2017 20:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,150 +499,205 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 70.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 94.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 90.
+
+
+LaTeX Warning: Reference `fig:penrose_Acute_0' on page 1 undefined on input lin
+e 90.
+
+<penrose_Acute_0.png, id=1, 777.90625pt x 502.87875pt>
+File: penrose_Acute_0.png Graphic file (type png)
+
+<use penrose_Acute_0.png>
+Package pdftex.def Info: penrose_Acute_0.png used on input line 94.
+(pdftex.def)             Requested size: 108.71478pt x 70.2721pt.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 95.
+LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <8> not available
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 95.
+ <penrose_Acute_1.png, id=3, 930.47626pt x 606.265pt>
+File: penrose_Acute_1.png Graphic file (type png)
+
+<use penrose_Acute_1.png>
+Package pdftex.def Info: penrose_Acute_1.png used on input line 98.
+(pdftex.def)             Requested size: 108.71478pt x 70.83372pt.
+
+<penrose_Obtuse_0.png, id=4, 976.64874pt x 358.33875pt>
+File: penrose_Obtuse_0.png Graphic file (type png)
+
+<use penrose_Obtuse_0.png>
+Package pdftex.def Info: penrose_Obtuse_0.png used on input line 102.
+(pdftex.def)             Requested size: 108.71478pt x 39.8876pt.
+
+<penrose_Obtuse_1.png, id=5, 981.6675pt x 370.38374pt>
+File: penrose_Obtuse_1.png Graphic file (type png)
+
+<use penrose_Obtuse_1.png>
+Package pdftex.def Info: penrose_Obtuse_1.png used on input line 106.
+(pdftex.def)             Requested size: 108.71478pt x 41.01361pt.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 111.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (14.08289pt too wide) in paragraph at lines 93--95
+Overfull \hbox (14.08289pt too wide) in paragraph at lines 110--112
 []\T1/ppl/m/n/10.95 Afin de dif-fé-ren-tier les tri-angles ob-tus des tri-angle
 s ai-gus, nous avons créé un type \T1/pcr/m/n/10.95 triangle \T1/ppl/m/n/10.95 
 : 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 96.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 113.
+
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (12.01271pt too wide) in paragraph at lines 176--190
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./penrose_Acute_0.png> <./
+penrose_Acute_1.png> <./penrose_Obtuse_0.png> <./penrose_Obtuse_1.png>]
+Overfull \hbox (12.01271pt too wide) in paragraph at lines 190--206
 []\T1/ppl/m/n/10.95 Une se-conde so-lu-tion est d'ef-fec-tuer plu-sieurs par-co
 urs pro-fon-deur, en aug-men-tant le nombre
  []
 
-[2] <hanoi_start.png, id=18, 803.0pt x 630.355pt>
+[2]
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 208
+.
+LaTeX Font Info:    No file OMScmss.fd. on input line 208.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textasteriskcentered' on input line 208.
+
+<hanoi_start.png, id=27, 803.0pt x 630.355pt>
 File: hanoi_start.png Graphic file (type png)
  <use hanoi_start.png>
-Package pdftex.def Info: hanoi_start.png used on input line 206.
+Package pdftex.def Info: hanoi_start.png used on input line 236.
 (pdftex.def)             Requested size: 108.71478pt x 85.3347pt.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 207.
-LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <8> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 207.
 
-<hanoi_mid1.png, id=20, 803.0pt x 630.355pt>
+<hanoi_mid1.png, id=28, 803.0pt x 630.355pt>
 File: hanoi_mid1.png Graphic file (type png)
  <use hanoi_mid1.png>
-Package pdftex.def Info: hanoi_mid1.png used on input line 210.
+Package pdftex.def Info: hanoi_mid1.png used on input line 240.
 (pdftex.def)             Requested size: 108.71478pt x 85.3347pt.
 
-<hanoi_mid2.png, id=21, 803.0pt x 630.355pt>
+<hanoi_mid2.png, id=29, 803.0pt x 630.355pt>
 File: hanoi_mid2.png Graphic file (type png)
  <use hanoi_mid2.png>
-Package pdftex.def Info: hanoi_mid2.png used on input line 214.
+Package pdftex.def Info: hanoi_mid2.png used on input line 244.
 (pdftex.def)             Requested size: 108.71478pt x 85.3347pt.
 
-<hanoi_end.png, id=22, 803.0pt x 630.355pt>
+<hanoi_end.png, id=30, 803.0pt x 630.355pt>
 File: hanoi_end.png Graphic file (type png)
  <use hanoi_end.png>
-Package pdftex.def Info: hanoi_end.png used on input line 218.
+Package pdftex.def Info: hanoi_end.png used on input line 248.
 (pdftex.def)             Requested size: 108.71478pt x 85.3347pt.
  [3 <./hanoi_start.png> <./hanoi_mid1.png> <./hanoi_mid2.png> <./hanoi_end.png>
 ]
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 292.
-
-<steps_plot.pdf, id=31, 505.89pt x 505.89pt>
+<steps_plot.pdf, id=40, 505.89pt x 505.89pt>
 File: steps_plot.pdf Graphic file (type pdf)
  <use steps_plot.pdf>
-Package pdftex.def Info: steps_plot.pdf used on input line 302.
+Package pdftex.def Info: steps_plot.pdf used on input line 332.
 (pdftex.def)             Requested size: 221.95676pt x 221.9593pt.
 
-<time_plot.pdf, id=32, 505.89pt x 505.89pt>
+<time_plot.pdf, id=41, 505.89pt x 505.89pt>
 File: time_plot.pdf Graphic file (type pdf)
  <use time_plot.pdf>
-Package pdftex.def Info: time_plot.pdf used on input line 305.
+Package pdftex.def Info: time_plot.pdf used on input line 335.
 (pdftex.def)             Requested size: 221.95676pt x 221.9593pt.
- [4 <./steps_plot.pdf> <./time_plot.pdf>] <hanoi_gen_start.png, id=50, 1284.8pt
- x 746.79pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4] <hanoi_gen_start.png, id=45, 1284.8pt x 746.79pt>
 File: hanoi_gen_start.png Graphic file (type png)
 
 <use hanoi_gen_start.png>
-Package pdftex.def Info: hanoi_gen_start.png used on input line 327.
+Package pdftex.def Info: hanoi_gen_start.png used on input line 357.
 (pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
- <hanoi_gen_mid1.png, id=51, 1284.8pt x 746.79pt>
+ <hanoi_gen_mid1.png, id=46, 1284.8pt x 746.79pt>
 File: hanoi_gen_mid1.png Graphic file (type png)
 
 <use hanoi_gen_mid1.png>
-Package pdftex.def Info: hanoi_gen_mid1.png used on input line 331.
+Package pdftex.def Info: hanoi_gen_mid1.png used on input line 361.
 (pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
- <hanoi_gen_mid2.png, id=52, 1284.8pt x 746.79pt>
+ <hanoi_gen_mid2.png, id=47, 1284.8pt x 746.79pt>
 File: hanoi_gen_mid2.png Graphic file (type png)
 
 <use hanoi_gen_mid2.png>
-Package pdftex.def Info: hanoi_gen_mid2.png used on input line 335.
+Package pdftex.def Info: hanoi_gen_mid2.png used on input line 365.
 (pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
- <hanoi_gen_end.png, id=53, 1284.8pt x 746.79pt>
+ <hanoi_gen_end.png, id=48, 1284.8pt x 746.79pt>
 File: hanoi_gen_end.png Graphic file (type png)
 
 <use hanoi_gen_end.png>
-Package pdftex.def Info: hanoi_gen_end.png used on input line 339.
+Package pdftex.def Info: hanoi_gen_end.png used on input line 369.
 (pdftex.def)             Requested size: 108.71478pt x 63.18573pt.
- <hanoi_10_4.png, id=54, 803.0pt x 630.355pt>
+ <hanoi_10_4.png, id=49, 803.0pt x 630.355pt>
 File: hanoi_10_4.png Graphic file (type png)
 
 <use hanoi_10_4.png>
-Package pdftex.def Info: hanoi_10_4.png used on input line 354.
+Package pdftex.def Info: hanoi_10_4.png used on input line 384.
 (pdftex.def)             Requested size: 221.95676pt x 174.23785pt.
- <hanoi_35_10.png, id=55, 803.0pt x 630.355pt>
+ <hanoi_35_10.png, id=50, 803.0pt x 630.355pt>
 File: hanoi_35_10.png Graphic file (type png)
 
 <use hanoi_35_10.png>
-Package pdftex.def Info: hanoi_35_10.png used on input line 358.
+Package pdftex.def Info: hanoi_35_10.png used on input line 388.
 (pdftex.def)             Requested size: 221.95676pt x 174.23785pt.
- <hanoi_wide.png, id=56, 1204.5pt x 228.855pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<hanoi_wide.png, id=51, 1204.5pt x 228.855pt>
 File: hanoi_wide.png Graphic file (type png)
-
-<use hanoi_wide.png>
-Package pdftex.def Info: hanoi_wide.png used on input line 368.
+ <use hanoi_wide.png>
+Package pdftex.def Info: hanoi_wide.png used on input line 398.
 (pdftex.def)             Requested size: 199.16928pt x 37.83975pt.
- <hanoi_tall.png, id=57, 351.3125pt x 746.79pt>
-File: hanoi_tall.png Graphic file (type png)
 
-<use hanoi_tall.png>
-Package pdftex.def Info: hanoi_tall.png used on input line 374.
+<hanoi_tall.png, id=52, 351.3125pt x 746.79pt>
+File: hanoi_tall.png Graphic file (type png)
+ <use hanoi_tall.png>
+Package pdftex.def Info: hanoi_tall.png used on input line 404.
 (pdftex.def)             Requested size: 66.9216pt x 142.26378pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <./hanoi_gen_start.png> <./hanoi_gen_mid1.png> <./hanoi_gen_mid2.png> <./han
-oi_gen_end.png> <./hanoi_10_4.png> <./hanoi_35_10.png>] [6 <./hanoi_wide.png> <
-./hanoi_tall.png>] [7] (./rapport.aux) ) 
+[5 <./steps_plot.pdf> <./time_plot.pdf> <./hanoi_gen_start.png> <./hanoi_gen_mi
+d1.png> <./hanoi_gen_mid2.png> <./hanoi_gen_end.png>] [6 <./hanoi_10_4.png> <./
+hanoi_35_10.png> <./hanoi_wide.png> <./hanoi_tall.png>] [7] (./rapport.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6248 strings out of 494991
- 89409 string characters out of 6180055
- 171666 words of memory out of 5000000
- 9337 multiletter control sequences out of 15000+600000
- 45997 words of font info for 94 fonts, out of 8000000 for 9000
+ 6300 strings out of 494991
+ 90257 string characters out of 6180055
+ 172666 words of memory out of 5000000
+ 9382 multiletter control sequences out of 15000+600000
+ 46252 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,7n,49p,241b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/en
-c/dvips/base/8r.enc} </home/clegrand/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecs
-s0900.600pk> </home/clegrand/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx0900.60
-0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
-o/uplri8a.pfb>
-Output written on rapport.pdf (7 pages, 234981 bytes).
+ 38i,7n,49p,241b,1288s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/clegrand/.
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0900.600pk> </home/clegrand/.texmf-va
+r/fonts/pk/ljfour/jknappen/ec/ecsx0900.600pk></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/math
+pazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxf
+ont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on rapport.pdf (7 pages, 334457 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 178 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -86,10 +86,27 @@
                 sommets. Par commodité, nous avons choisi de suivre la
                 convention suivante: le premier sommet est celui duquel sont issus les deux
                 cotés de longeurs égales, le second est le suivant en
-                tournant dans le sens horaire.
+                tournant dans le sens horaire (Figures
+                \ref{fig:penrose_Acute_0} et \ref{fig:penrose_Obtuse_0}).
 
-                Inserer image!
-
+		\begin{figure}
+			\minipage{0.24\textwidth}
+			  \includegraphics[width=\linewidth]{penrose_Acute_0.png}
+			  \caption{Triangle d'or aigu}\label{fig:penrose_Acute_O}
+			\endminipage\hfill
+			\minipage{0.24\textwidth}
+			  \includegraphics[width=\linewidth]{penrose_Acute_1.png}
+			  \caption{Découpe d'un triangle d'or aigu}\label{fig:penrose_Acute_1}
+			\endminipage\hfill
+			\minipage{0.24\textwidth}
+			  \includegraphics[width=\linewidth]{penrose_Obtuse_0.png}
+			  \caption{Triangle d'or obtu}\label{fig:penrose_Obtuse_0}
+			\endminipage\hfill
+			\minipage{0.24\textwidth}
+			  \includegraphics[width=\linewidth]{penrose_Obtuse_1.png}
+			  \caption{Découpe d'un triangle d'or obtu}\label{fig:penrose_Obtuse_1}
+			\endminipage\hfill
+		\end{figure}
                 Afin de différentier les triangles obtus des triangles
                 aigus, nous avons créé un type \texttt{triangle}:
 
@@ -103,7 +120,7 @@
                 le nombre de subdivisions restant à effectuer, qui
                 effectue la découpe de celui-ci, et s'appellant
                 récursivement avec en paramètre les nouveaux triangles
-                obtenus.
+                obtenus (Figures \ref{fig:penrose_Acute_1} et \ref{fig:penrose_Obtuse_1}).
 
                 L'idée est alors de découper récursivement un triangle
                 initial de grande taille. 
@@ -139,13 +156,10 @@
                 remédier, il suffit, lors de chaque subdivision d'un
                 triangle, de ne tracer que les séparations entre les
                 nouveaux triangles obtenus (et de ne pas oublier les
-                cotés du triangle initial).
-
-		Inserer une image! (+ peuve?)
-
-		Il apparaît alors qu'il est necéssaire de tracer ces
+                cotés du triangle initial). Il apparaît alors qu'il est necéssaire de tracer ces
                 lignes après que les triangles soient remplis, afin
                 que celles ci ne soient pas effacées.
+
 		La fonction \texttt{divide} est en réalité un simple
                 parcours en profondeur de l'arbre des divisions des
                 triangles.
@@ -183,14 +197,30 @@
                 partir d'un triangle initial de petite taille et 
                 d'effectuer une homothétie à la fin de chaque
                 parcours, afin de donner l'impression que le pavage
-                s'expand.
-                En revanche, du fait que l'on recommence
-                systématiquement le parcours depuis le debut, deux
-                fois plus de calculs sont effectués.
-
-                La subdivision d'un grand triangle initial, en
+                s'expand. La subdivision d'un grand triangle initial, en
                 contrepartie d'une certaine simplicité et efficacité,
-                nécessite de prévoir le nombre de générations à l'avance.
+                nécessite de prévoir le nombre de générations à
+                l'avance, problème que l'on évite
+                ainsi. L'implémentation de l'homothétie se fait en
+                modifiant la fonction \texttt{draw}:
+                \begin{lstlisting}
+                  let homothety tab factor = 
+                      Array.map (fun (x,y) -> (width/.2. +. (x -. width/.2.)*.factor, 
+                                               height/.2. +. (y -. height/.2.)*.factor)) tab
+                  ;;
+  
+                  let draw points triangle homo_factor=
+                     (if triangle = Obtuse then set_color red
+                     else set_color blue);
+                     if homo_factor = 1. then fill_poly (iof_array points)
+                     else fill_poly (iof_array (homothety points homo_factor))
+                  ;;
+
+                \end{lstlisting}
+
+                En revanche, du fait que l'on recommence
+                systématiquement le parcours depuis le début, deux
+                fois plus de calculs sont effectués.
 
 \section{Hanoi}
 
