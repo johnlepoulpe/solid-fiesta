@@ -68,29 +68,47 @@
 
 \section{Penrose}
         \subsection{Principe: algorithme de base}
+                Ce pavage de Penrose s'obtient par divisions
+                successives de triangles aux dimensions particulières. 
                 Le pavage de Penrose implémenté utilise deux tuiles de
-                base, des triangles d'or. Les dimensions de leurs
+                base, des triangles d'or. Ce sont des triangles
+                isocèles dont la longueur des cotés sont 1 et le
+                nombre d'or. 
+                Les dimensions de leurs
                 côtés sont donc des des nombres flottants. Afin
-                d'éviter des erreurs d'arrondi suceptibles de ce
+                d'éviter des erreurs d'arrondi susceptibles de se
                 cumuler, et d'alléger le code, nous avons choisi de ne
                 travailler qu'avec des flottants, avant des les
                 arrondir en entiers juste avant le tracé.
                 
-                Par commodité, nous avons suivi la convention
-                suivante: les triangles seront représentés par un
-                tableau contenant les coordonnées des trois sommets,
-                le premier étant celui duquel sont issus les deux
+                Nous avons choisi de representer les triangles par un
+                tableau contenant les coordonnées des trois
+                sommets. Par commodité, nous avons choisi de suivre la
+                convention suivante: le premier sommet est celui duquel sont issus les deux
                 cotés de longeurs égales, le second est le suivant en
                 tournant dans le sens horaire.
 
                 Inserer image!
 
-                Afin de differentier les triangles obtus des triangles
+                Afin de différentier les triangles obtus des triangles
                 aigus, nous avons créé un type \texttt{triangle}:
 
 		\begin{lstlisting}
                   type triangle = Obtuse | Acute;;
 		\end{lstlisting}
+
+                Le travail se résume alors à écrire une fonction \texttt{divide},
+                prenant en paramètre un triangle (le tableau des
+                coordonnées de ses sommets et son type) ainsi que la
+                le nombre de subdivisions restant à effectuer, qui
+                effectue la découpe de celui-ci, et s'appellant
+                récursivement avec en paramètre les nouveaux triangles
+                obtenus.
+
+                L'idée est alors de découper récursivement un triangle
+                initial de grande taille. 
+
+                Inserer image!
 
                 Une des principales difficultés rencontrées lors de
                 l'implémentation de ce pavage est le fait la fonction
@@ -115,6 +133,7 @@
                 \end{lstlisting}
                 
 	\subsection{Améliorations}
+
 		Le premier problème du code précédent est que les
                 côtés des triangles sont tous tracés deux fois. Pour y
                 remédier, il suffit, lors de chaque subdivision d'un
@@ -128,24 +147,50 @@
                 lignes après que les triangles soient remplis, afin
                 que celles ci ne soient pas effacées.
 		La fonction \texttt{divide} est en réalité un simple
-                parcours en profondeur de l'arbre des divisions des triangles.		
+                parcours en profondeur de l'arbre des divisions des
+                triangles.
 		Plutôt que d'afficher directement le pavage, il semble
                 plus interressant de montrer la division succéssive
                 des triangles pendant la construction du
                 pavage. Survient alors une nouvelle difficulté:
                 l'algorithme de parcours en profondeur décrit
-                précédemment ne convient plus. 
+                précédemment ne convient plus.
+
+ 
 		Une première solution est d'implémenter un parcours
                 largeur et de marquer une pause avant d'entamer chaque
-                nouvelle profondeur de l'arbre. il faut pour cela
-                maintenir une structure de file   En revanche, il est
+                nouvelle profondeur de l'arbre. Il faut pour cela
+                maintenir une structure de file. Une des conséquences
+                de ce choix d'implémentation est que la
+                complexité mémoire est un $\Theta(2^{n})$ où $n$ est le
+                nombre de générations et non plus un $\Theta(n)$
+                correspondant à la profondeur de la ple de récursion.
+                Par ailleurs, il est
                 alors nettement plus difficle d'afficher les couleurs
                 des triangles dessinés à chaque génération et de ne
-               tracer chaque coté qu'une seule fois. En effet, à
+                tracer chaque coté qu'une seule fois. En effet, à
                 chaque nouvelle génération, la coloration des
                 triangles efface les cotés de ceux ci si ils ont été
                 précédemment tracés. 
+                
+                Une seconde solution est d'effectuer plusieurs
+                parcours profondeur, en augmentant le nombre de
+                génération à chaque fois, et en marquant une pause
+                entre chaque nouveau parcours. Cela permet de
+                conserver une complexité mémoire linéaire en le nombre
+                de générations et d'afficher les couleurs des triangles
+                à chaque génération. De plus, il est possible de
+                partir d'un triangle initial de petite taille et 
+                d'effectuer une homothétie à la fin de chaque
+                parcours, afin de donner l'impression que le pavage
+                s'expand.
+                En revanche, du fait que l'on recommence
+                systématiquement le parcours depuis le debut, deux
+                fois plus de calculs sont effectués.
 
+                La subdivision d'un grand triangle initial, en
+                contrepartie d'une certaine simplicité et efficacité,
+                nécessite de prévoir le nombre de générations à l'avance.
 
 \section{Hanoi}
 
@@ -369,19 +414,32 @@
 
 	%Votre auto-évaluation selon le schéma SWOT/FFOM~(\url{https://fr.wikipedia.org/wiki/SWOT}).
 	\begin{description}
-		\item[Forces.] En ce qui concerne la partie consacrée au Tours de Hanoi
-		je pense que le point fort est l'affichage très flexible que nous avons
-		implémenté.
-		\item[Faiblesses.]  Le manque de modularité et de séparation du code
-		s'est vu très pénible au moment d'harmoniser les différentes versions
-		du code à envoyer (algorithme basique, généralisé et avec affichage).
+		\item[Forces.] L'avantage principal de notre implémentation du
+                  pavage de Penrose est que le type de parcours
+                  effectué présente des avantages différents, et ce
+                  choix est par conséquent laissé à l'utilisateur. 
+                  Par ailleurs la version finale avec homothétie est
+                  assez aboutie et pourrait par exemple être utilisée
+                  comme économiseur d'écran.
+                  En ce qui concerne la partie consacrée au Tours de Hanoi
+                  je pense que le point fort est l'affichage très flexible que nous avons
+                  implémenté. 
+		\item[Faiblesses.] Pour Penrose, les triangles en
+                  dehors de l'écran sont tout de même traités, ce qui
+                  ralentis considérablement le code quand le nombre de
+                  générations est élevé. D'autre part, l'homothétie
+                  pourrait se faire de manière plus progressive, pour
+                  donner l'impression d'un zoom continu et fluide.
+                  Le manque de modularité et de séparation du code
+                  s'est vu très pénible au moment d'harmoniser les différentes versions
+                  du code à envoyer (algorithme basique, généralisé et avec affichage).
 		\item[Opportunités.] Ce projet m'a appris l'importance de la modularité
-		du code, pour les raisons avant mentionnées, et aussi à gérer un projet
-		mené par plusieurs personnes, ce qui peut s'avérer plus difficile que
-		prévu.
+                  du code, pour les raisons avant mentionnées, et aussi à gérer un projet
+                  mené par plusieurs personnes, ce qui peut s'avérer plus difficile que
+                  prévu.
 		\item[Menaces.] Il est trop souvent facile de remplir le code de
-		littéraux et de constantes, mais quand il faut généraliser le
-		code déjà écrit, cet effort non effectué fait perdre énormément de temps.
+                  littéraux et de constantes, mais quand il faut généraliser le
+                  code déjà écrit, cet effort non effectué fait perdre énormément de temps.
 	\end{description}
 	
 \end{document}
