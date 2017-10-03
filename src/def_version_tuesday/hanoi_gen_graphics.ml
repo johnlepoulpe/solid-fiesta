@@ -178,7 +178,7 @@ let hanoi total_discs total_rods =
   step ();
 
   (*THIRD STEP:
-    stacks the discs stocked in the intermediate
+    stacks the discs stored in the intermediate
     rods on top of the largest one in the last rod*)
   for i = total_rods-2 downto 1 do
     if i = 1 then

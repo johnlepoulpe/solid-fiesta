@@ -75,7 +75,7 @@
                 isocèles dont la longueur des cotés sont 1 et le
                 nombre d'or. 
                 Les dimensions de leurs
-                côtés sont donc des des nombres flottants. Afin
+                côtés sont donc des nombres flottants. Afin
                 d'éviter des erreurs d'arrondi susceptibles de se
                 cumuler, et d'alléger le code, nous avons choisi de ne
                 travailler qu'avec des flottants, avant des les
@@ -100,11 +100,11 @@
 			\endminipage\hfill
 			\minipage{0.24\textwidth}
 			  \includegraphics[width=\linewidth]{penrose_Obtuse_0.png}
-			  \caption{Triangle d'or obtu}\label{fig:penrose_Obtuse_0}
+			  \caption{Triangle d'or obtus}\label{fig:penrose_Obtuse_0}
 			\endminipage\hfill
 			\minipage{0.24\textwidth}
 			  \includegraphics[width=\linewidth]{penrose_Obtuse_1.png}
-			  \caption{Découpe d'un triangle d'or obtu}\label{fig:penrose_Obtuse_1}
+			  \caption{Découpe d'un triangle d'or obtus}\label{fig:penrose_Obtuse_1}
 			\endminipage\hfill
 		\end{figure}
                 Afin de différentier les triangles obtus des triangles
@@ -116,7 +116,7 @@
 
                 Le travail se résume alors à écrire une fonction \texttt{divide},
                 prenant en paramètre un triangle (le tableau des
-                coordonnées de ses sommets et son type) ainsi que la
+                coordonnées de ses sommets et son type) ainsi que
                 le nombre de subdivisions restant à effectuer, qui
                 effectue la découpe de celui-ci, et s'appellant
                 récursivement avec en paramètre les nouveaux triangles
@@ -124,8 +124,6 @@
 
                 L'idée est alors de découper récursivement un triangle
                 initial de grande taille. 
-
-                Inserer image!
 
                 Une des principales difficultés rencontrées lors de
                 l'implémentation de ce pavage est le fait la fonction
