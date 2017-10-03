@@ -26,7 +26,7 @@ let get_rod_spacing total_rods = win_width / total_rods;;
 let draw_rod midx width height =
   set_color black;
   fill_poly [|(midx-width/2, 0); (midx+width/2, 0);
-	      (midx+width/2, height); (midx-width/2, height)|]
+              (midx+width/2, height); (midx-width/2, height)|]
 ;;
 
 (*draws the 3 black rods*)
@@ -40,9 +40,9 @@ let draw_rods total_rods =
       (win_width-spacing)/2 mod spacing
     else
       (win_width/2) mod spacing in
-  
+
   clear_graph ();
-  
+
   for i=0 to total_rods-1 do
     draw_rod (first_pos + spacing * i) upd_width rod_base_height
   done
@@ -74,9 +74,9 @@ let draw_disc total_discs total_rods rod disc_height disc_num =
   let real_height = upd_height * disc_height in
   set_color blue;
   fill_poly [|(pos - width / 2, real_height);
-	      (pos + width / 2, real_height);
-	      (pos + width / 2, real_height + upd_height);
-	      (pos - width / 2, real_height + upd_height)|]
+              (pos + width / 2, real_height);
+              (pos + width / 2, real_height + upd_height);
+              (pos - width / 2, real_height + upd_height)|]
 ;;
 
 (*draws the current situation of the game*)
@@ -86,10 +86,10 @@ let draw_situation total_discs total_rods rods =
     match rod_rest with
     | [] -> ()
     | x :: xs ->
-       (
-	 draw_rod xs rod_num (curr+1);
-	 draw_disc total_discs total_rods rod_num curr x;
-       ) in
+      (
+        draw_rod xs rod_num (curr+1);
+        draw_disc total_discs total_rods rod_num curr x;
+      ) in
   for i=0 to total_rods-1 do
     draw_rod (mirror rods.(i)) i 0;
   done;
@@ -104,13 +104,13 @@ let draw_situation total_discs total_rods rods =
 let move_disc total_discs total_rods rods orig_rod dest_rod =
   let disc = top rods.(orig_rod) in
   draw_rods total_rods;
-  
+
   rods.(orig_rod) <- pop rods.(orig_rod);
   rods.(dest_rod) <- push disc rods.(dest_rod);
-  
+
   draw_situation total_discs total_rods rods;
 ;;
-      
+
 (*moves num_discs discs from orig_rod to dest_rod*)
 let rec move total_discs total_rods rods num_discs
     orig_rod dest_rod temp_rod =
@@ -118,21 +118,21 @@ let rec move total_discs total_rods rods num_discs
   else if num_discs = 1 then
     (
       move_disc total_discs total_rods rods orig_rod dest_rod;
-      
+
       print_mov orig_rod dest_rod;
-     
+
       step ();
     )
   else
     (
       move total_discs total_rods rods
-	(num_discs - 1) orig_rod temp_rod dest_rod;
+        (num_discs - 1) orig_rod temp_rod dest_rod;
       move total_discs total_rods rods 1 orig_rod dest_rod 0;
-      
+
       print_mov orig_rod dest_rod;
-      
+
       move total_discs total_rods rods
-	(num_discs - 1) temp_rod dest_rod orig_rod;
+        (num_discs - 1) temp_rod dest_rod orig_rod;
     )
 ;;
 
@@ -142,38 +142,38 @@ let hanoi total_discs total_rods =
 
   let win_format =
     " " ^ (string_of_int win_width) ^ "x" ^
-      (string_of_int win_height) ^ "-0+0" in
+    (string_of_int win_height) ^ "-0+0" in
   close_graph ();
   open_graph win_format;
-  
+
   let rods =
     Array.make total_rods [] in rods.(0) <- init_rod total_discs [];
-  
+
   (*-> disc_count equals to the number of discs to be stored in
     the intermediate rods.
     -> disc_rods is the remainder of the division, those discs can
     be distributed freely between the intermediate rods *)
   let disc_count = (total_discs - 1) / (total_rods - 2) and
-      disc_rest = (total_discs - 1) mod (total_rods - 2) in
+    disc_rest = (total_discs - 1) mod (total_rods - 2) in
 
   draw_rods total_rods;
   draw_situation total_discs total_rods rods;
-  
+
   (*FIRST STEP:
     distributes all of the discs except for the largest between
     the intermediate rod using the last one as a buffer*)
   for i=1 to total_rods-2 do
     if i = 1 then
       move total_discs total_rods rods
-	(disc_count + disc_rest) 0 i (total_rods - 1)
+        (disc_count + disc_rest) 0 i (total_rods - 1)
     else
       move total_discs total_rods rods
-	disc_count 0 i (total_rods - 1)
+        disc_count 0 i (total_rods - 1)
   done;
 
   (*SECOND STEP: moves the largest disc to the last rod*)
   move_disc total_discs total_rods rods 0 (total_rods - 1);
-  
+
   print_mov 0 (total_rods - 1);
   step ();
 
@@ -183,10 +183,10 @@ let hanoi total_discs total_rods =
   for i = total_rods-2 downto 1 do
     if i = 1 then
       move total_discs total_rods rods
-	(disc_count + disc_rest) i (total_rods - 1) 0
+        (disc_count + disc_rest) i (total_rods - 1) 0
     else
       move total_discs total_rods rods
-	disc_count i (total_rods - 1) 0
+        disc_count i (total_rods - 1) 0
   done;
 
   print_int (get ());

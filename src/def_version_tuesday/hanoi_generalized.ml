@@ -1,17 +1,18 @@
 (*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*)
+
 (*main function*)
 let hanoi total_discs total_rods=
   init ();
-  
+
   let rods =
     Array.make total_rods [] in rods.(0) <- init_rod total_discs [];
-  
+
   (*-> disc_count equals to the number of discs to be stored in
     the intermediate rods.
     -> disc_rods is the remainder of the division, those discs can
     be distributed freely between the intermediate rods *)
   let disc_count = (total_discs - 1) / (total_rods - 2) and
-      disc_rest = (total_discs - 1) mod (total_rods - 2) in
+    disc_rest = (total_discs - 1) mod (total_rods - 2) in
 
   (*FIRST STEP:
     distributes all of the discs except for the largest between
@@ -25,7 +26,7 @@ let hanoi total_discs total_rods=
 
   (*SECOND STEP: moves the largest disc to the last rod*)
   move rods 1 0 (total_rods - 1) 0;
-  
+
   print_mov 0 (total_rods - 1);
 
   (*THIRD STEP:
